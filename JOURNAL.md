@@ -1,12 +1,16 @@
-# Design 
+# Design
+
+## 1. Génération du design
+
 - **Date :** Septembre 2026
-- **Prompt :**
-  - *Prompt #1 :* À l'aide de mon identité visuelle et mon identité pro fait moi 3 design de portfolio.
-  - *Prompt #2 :* Inspire toi de ses portfolio avec le glassmorphism, mais garde mon indentitté visuelle sans rien rajouer.
 - **Outil :** Google Stitch
-- **Résultat :** Il a généré pratiquement ce que je voulais, cependant j'ai quand même modifié quelque éléments visuelle et texte.
+- **Prompt :**
+  - *Prompt #1 :* À l'aide de mon identité visuelle et de mon identité professionnelle, fais-moi 3 designs de portfolio.
+  - *Prompt #2 :* Inspire-toi de ces portfolios avec le glassmorphism, mais garde mon identité visuelle sans rien rajouter.
+- **Résultat :** Google Stitch a généré pratiquement ce que je voulais. J'ai cependant modifié certains éléments visuels et certains textes afin de mieux correspondre à mon concept.
 
-- **Date :** 12 Septembre 2026
+## 2. Avancement de la maquette
+
+- **Date :** 12 septembre 2026
 - **Outil :** Figma
-- **Résultat :** J'ai finalisé la maquette de mon portfolio sur ordinateur et mobile.
-
+- **Résultat :** J'ai finalisé la maquette de mon portfolio pour les versions ordinateur et mobile. Il me manque simplement de designer la page d'un projets.
