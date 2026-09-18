@@ -1,0 +1,23 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* VARIABLE */
+:root{
+    --font-global: 'Plus Jakarta Sans', sans-serif;
+    --background-color: #0D120F;
+    --background-terminal: #0E1411;
+    --background-main: radial-gradient(#23443B 35%, #121814 85%, #0E1310 95%);
+    --background-card: linear-gradient(120deg, #23443B 38%, #121915 85%);
+    --orbs-primary-color: #23443B;
+    --orbs-secondary-color: #1A332A;
+    --text-primary-color: #FFFFFF;
+    --text-secondary-color: #CFF1DE;
+    --text-tertiary-color: #86A394;
+    --button-color: #23443B66;
+    --button-color-hover: #CFF1DE;
+    --button-stroke: #CFF1DE4D;
+    --button-text-color: #162C26;
+    --button-drop-shadow: 0px 0px 15px #CFF1DE4D;
+    --svg-color: #CFF1DE;
+    --svg-color-hover: #162C26;
+}

@@ -1,0 +1,38 @@
+/* STYLE DE BOUTON */
+button {
+    background-color: var(--button-color);
+    border-radius: 8px;
+    border: 2px solid var(--button-stroke);
+
+    p {
+        color: var(--text-secondary-color);
+        font: var(--font-global);
+        font-weight: 600;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    svg path {
+        stroke: var(--svg-color);
+    }
+}
+
+/* HOVER BOUTON */
+button:hover {
+    background-color: var(--button-color-hover);
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    filter:drop-shadow(var(--button-drop-shadow));
+
+
+    p {
+        color: var(--button-text-color);
+    }
+
+    svg path {
+        stroke: var(--svg-color-hover);
+    }
+}
