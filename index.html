@@ -23,16 +23,350 @@
 </head>
 
 <body>
-  <main class="flex justify-center items-center h-screen">
-    <button class="flex max-w-max items-center gap-2 px-4 sm:px-6 py-2 sm:py-3">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 15V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18L4 15M8 11L12 15M12 15L16 11M12 15V3"
-          stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <p>Consulter CV (PDF)</p>
-    </button>
+  <div id="particles-js" class="flex justify-center items-center fixed inset-0 z-[-1]"></div>
+  <div class="orbs-top"></div>
+  <div class="orbs-bottom"></div>
 
+  <main class="flex justify-center items-center min-h-screen">
+
+    <!-- Navigation latérale -->
+    <aside class="sidebar-nav">
+      <div class="nav-brand">
+        <span class="avatar-tag">ZW</span>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-group">
+          <li class="nav-item">
+            <a href="#accueil" class="nav-link active" aria-label="Accueil">
+              <svg><!-- Icône Accueil --></svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-label-container">
+          <span class="nav-label">PROJETS</span>
+          <div class="sidebar-separator"></div>
+        </div>
+
+        <ul class="nav-group">
+          <li class="nav-item">
+            <a href="#projets" class="nav-link" aria-label="Projets">
+              <svg><!-- Icône Projets / Fichier --></svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#competences" class="nav-link" aria-label="Compétences">
+              <svg><!-- Icône Code </> --></svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#parcours" class="nav-link" aria-label="Parcours">
+              <svg><!-- Icône Graphique / Barres --></svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" aria-label="Contact">
+              <svg><!-- Icône Contact / Bulle --></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Panneau central -->
+    <div class="main-frame">
+
+      <!-- En-tête -->
+      <header class="frame-header">
+        <div class="left">
+          <div class="badge-year">ZW 2025</div>
+          <div class="left-text">
+            <p class="name">Zackary Warren</p>
+            <p class="role">Intégrateur Front-End • Accessibilité &amp; Performance</p>
+          </div>
+        </div>
+
+        <div class="right">
+          <span class="status-indicator">
+            <span class="light"></span>
+            Disponible pour stage (3 mois)
+          </span>
+          <span class="header-v-separator" aria-hidden="true">|</span>
+          <a href="#contact" class="contact-link">Me contacter &rarr;</a>
+        </div>
+      </header>
+
+      <hr class="main-separator" />
+
+      <div class="content-frame">
+
+        <!-- Présentation (Gauche) -->
+        <section class="hero-left">
+          <div class="category-badge">
+            <span class="dot">•</span> INTÉGRATION WEB &amp; CRÉATIVITÉ FRONT-END
+          </div>
+
+          <h1 class="main-title">
+            Zackary<br />Warren<span class="cursor">.</span>
+          </h1>
+
+          <p class="description">
+            Bonjour ! Je m'appelle Zackary Warren. Finissant en intégration multimédia au Collège Montmorency,
+            je conçois et façonne des expériences numériques interactives pour le web de demain.
+          </p>
+
+          <a href="/cv-zackary-warren.pdf" download
+            class="btn-cv flex w-full sm:max-w-max items-center justify-center gap-2 px-4 sm:px-6 py-3">
+            <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 15V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18L4 15M8 11L12 15M12 15L16 11M12 15V3"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Consulter CV (PDF)</span>
+          </a>
+
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub">
+              <svg><!-- SVG GitHub --></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg><!-- SVG LinkedIn --></svg>
+            </a>
+            <a href="mailto:contact@exemple.com" class="social-icon" aria-label="Courriel">
+              <svg><!-- SVG Mail --></svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Carte UI / Terminal & Compétences (Droite) -->
+        <section class="profile-card">
+
+          <header class="card-header">
+            <div class="avatar-box">ZW</div>
+            <div class="profile-meta">
+              <h2 class="name">Zackary Warren</h2>
+              <p class="job">Développeur Front-End &amp; Intégrateur UI</p>
+              <p class="mobility">Saint-Eustache, Canada • Mobilité &amp; Télétravail</p>
+            </div>
+            <span class="tag-dev">#dev</span>
+          </header>
+
+          <hr class="card-separator" />
+
+          <!-- Fenêtre Code / Config -->
+          <div class="code-terminal">
+            <div class="terminal-bar">
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file-name">integrator.config.js</span>
+              </div>
+              <span class="badge-ready">ready</span>
+            </div>
+
+            <div class="terminal-separator"></div>
+
+            <pre><code><span class="keyword">const</span> <span class="variable">integrator</span> = {
+  <span class="property">formation</span>: <span class="string">'Technique d\'intégration multimédia'</span>,
+  <span class="property">prochaineEtape</span>: <span class="string">'Baccalauréat en génie logiciel'</span>,
+  <span class="property">valeur</span>: [<span class="string">'Fiable'</span>, <span class="string">'Autonomie'</span>, <span class="string">'Curieux'</span>],
+  <span class="property">disponiblePour</span>: <span class="string">'Stage temps plein (mars-mai 2027)'</span>,
+};</code></pre>
+          </div>
+
+          <hr class="card-separator" />
+
+          <!-- Section Technologies -->
+          <div class="skills-section">
+            <h3 class="section-title">TECHNOLOGIES &amp; NIVEAU</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- HTML icon --></svg> HTML</span>
+                  <span class="pct">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 90%;"></div>
+                </div>
+                <p class="keywords">Sémantique • W3C • Canvas</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- CSS icon --></svg> CSS</span>
+                  <span class="pct">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 90%;"></div>
+                </div>
+                <p class="keywords">Flexbox • Grid • Tailwind</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- JS icon --></svg> JavaScript</span>
+                  <span class="pct">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 85%;"></div>
+                </div>
+                <p class="keywords">DOM • ES6+ • Anime.js</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- CMS icon --></svg> CMS</span>
+                  <span class="pct">75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 75%;"></div>
+                </div>
+                <p class="keywords">WordPress • Elementor • ACF</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- Git icon --></svg> Git / GitHub</span>
+                  <span class="pct">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 80%;"></div>
+                </div>
+                <p class="keywords">Versionnage • CLI • Workflows</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-header">
+                  <span class="name"><svg><!-- CPP icon --></svg> C++</span>
+                  <span class="pct">60%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="fill" style="width: 60%;"></div>
+                </div>
+                <p class="keywords">Bases POO • Algorithmes</p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="card-separator" />
+
+          <footer class="card-footer">
+            <span>Dernière intégration :</span>
+            <a href="#" class="project-link">Veyloria &rarr;</a>
+          </footer>
+        </section>
+      </div>
+
+      <div class="content-frame-project">
+
+        <!-- Colonne Gauche : Aperçu & Actions -->
+        <section class="project-preview">
+
+          <!-- En-tête du projet -->
+          <header class="project-header">
+            <h1 class="main-title-project">
+              <span class="project-number">01.</span> Lorem<span class="cursor">|</span>
+            </h1>
+            <p class="description-project"> Lorem </p>
+          </header>
+
+          <!-- Carrousel d'aperçus -->
+          <div class="project-carousel">
+            <div class="carousel-viewport">
+              <ul class="carousel-track">
+                <li class="carousel-slide active">
+                  <img src="#" alt="Lorem ipsum" />
+                </li>
+              </ul>
+            </div>
+
+            <!-- Indicateurs de pagination (les 3 points sous l'image) -->
+            <div class="carousel-dots" role="tablist" aria-label="Navigation des captures">
+              <button class="dot active" role="tab" aria-selected="true" aria-label="Image 1"></button>
+              <button class="dot" role="tab" aria-selected="false" aria-label="Image 2"></button>
+              <button class="dot" role="tab" aria-selected="false" aria-label="Image 3"></button>
+            </div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="project-actions">
+
+            <a href="https://example.com/qrypta" target="_blank" rel="noopener noreferrer"
+              class="btn-action btn-primary">
+              <svg> <!-- Icône Œil --> </svg>
+              <span>Visiter le site live</span>
+            </a>
+
+            <a href="https://github.com/ton-profil/qrypta" target="_blank" rel="noopener noreferrer"
+              class="btn-action btn-secondary">
+              <svg> <!-- Icône GitHub --> </svg>
+              <span>Répertoire Github</span>
+            </a>
+
+            <button type="button" class="btn-action btn-secondary" aria-haspopup="dialog">
+              <svg> <!-- Logo info --> </svg>
+              <span>En savoir plus</span>
+            </button>
+          </div>
+
+        </section>
+
+        <!-- Colonne Droite : Détails & Stacks -->
+        <aside class="project-details">
+
+          <!-- Section Description -->
+          <div class="details-block">
+            <h2 class="details-heading">Description du projet</h2>
+            <p class="details-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1960s,
+              when designers at Letraset and James Mosley, the librarian at St Bride
+              Printing Library in London, took a 1914 Cicero translation and scrambled it to
+              make dummy text for Letraset's Body Type sheets.
+            </p>
+          </div>
+
+          <!-- Section Technologies -->
+          <div class="details-block">
+            <h2 class="details-heading">Technologie utilisé</h2>
+            <div class="tech-stack-badges">
+              <div class="badge-tech badge-html" title="HTML">
+                <svg> <!-- Logo HTML5 --> </svg>
+              </div>
+              <div class="badge-tech badge-css" title="CSS">
+                <svg> <!-- Logo CSS3 --> </svg>
+              </div>
+
+              <div class="badge-tech badge-js" title="JavaScript">
+                <svg> <!-- Logo JS --></svg>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <hr class="main-separator" />
+
+      <!-- Bas de page -->
+      <footer class="frame-footer">
+        <p class="copyright">&copy; 2026 Zackary Warren | Tous droits réservés.</p>
+        <div class="status-notes">
+          <span>Recherche active : Dès Septembre 2026</span>
+          <span class="bullet" aria-hidden="true">&bull;</span>
+          <span>Convention de stage d'école prête</span>
+        </div>
+      </footer>
+
+    </div>
   </main>
+
 </body>
 
 </html>

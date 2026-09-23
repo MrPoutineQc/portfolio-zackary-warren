@@ -31,6 +31,13 @@
 5. Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris?
  - J'ai aidé l'IA pour m'aider à visualiser l'idée de portfolio que j'avais en tête. J'ai appris qu'il fallait être très précis lorsque l'on a une idée précise.
 
-- **Date :** 16 septembre 2026
-- **Outil :** Figma
-- **Résultat :** J'ai finalement designer la page projets mobile/pc du portfolio.
+
+# Développement 
+
+## 1. Écriture du HTML 
+
+- **Date :** 22 Septembre 2026
+- **Outil :** Gemini x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Est-ce que mon html correspond a mon design si non qu'est-ce qu'il a modifier et améliorer ? .
+- **Résultat :** Gemini à dit « La structure globale est une excellente base, mais plusieurs éléments sémantiques, hiérarchiques et visuels ne correspondent pas fidèlement à la maquette. » Il m'a ensuite renvoyer le code avec les corrections.
