@@ -8,14 +8,16 @@
   <title>Portfolio - Zackary Warren</title>
 
   <!-- IMPORTATION LIBRARIE -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
+
   <!-- CSS -->
-  <link rel="stylesheet" href="/src/css/base.css">
-  <link rel="stylesheet" href="/src/css/layout.css">
-  <link rel="stylesheet" href="/src/css/components/button.css">
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/layout.css" />
+  <link rel="stylesheet" href="/src/css/components/button.css" />
+  <link rel="stylesheet" href="/src/css/components/skill.css" />
+  <link rel="stylesheet" href="/src/css/components/navbar.css" />
 
   <!-- JS -->
   <script src="/src/js/data.js"></script>
@@ -23,67 +25,100 @@
 </head>
 
 <body>
-  <div id="particles-js" class="flex justify-center items-center fixed inset-0 z-[-1]"></div>
+  <div id="particles-js"></div>
   <div class="orbs-top"></div>
   <div class="orbs-bottom"></div>
 
-  <main class="flex justify-center items-center min-h-screen">
+  <main>
 
-    <!-- Navigation latérale -->
-    <aside class="sidebar-nav">
-      <div class="nav-brand">
-        <span class="avatar-tag">ZW</span>
-      </div>
+    <!-- MENU NAV -->
+    <aside class="sidebar">
 
-      <nav aria-label="Navigation principale">
+      <!-- NAV PRINCIPALE -->
+      <nav class="nav">
         <ul class="nav-group">
+          <li>
+            <div class="nav-brand">
+              <span class="avatar-tag">ZW</span>
+            </div>
+          </li>
           <li class="nav-item">
             <a href="#accueil" class="nav-link active" aria-label="Accueil">
-              <svg><!-- Icône Accueil --></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+              </svg>
             </a>
           </li>
         </ul>
 
-        <div class="nav-label-container">
-          <span class="nav-label">PROJETS</span>
-          <div class="sidebar-separator"></div>
-        </div>
+        <!-- SÉPARATEUR NAV -->
+        <div class="nav-separator"></div>
 
-        <ul class="nav-group">
-          <li class="nav-item">
-            <a href="#projets" class="nav-link" aria-label="Projets">
-              <svg><!-- Icône Projets / Fichier --></svg>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#competences" class="nav-link" aria-label="Compétences">
-              <svg><!-- Icône Code </> --></svg>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#parcours" class="nav-link" aria-label="Parcours">
-              <svg><!-- Icône Graphique / Barres --></svg>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link" aria-label="Contact">
-              <svg><!-- Icône Contact / Bulle --></svg>
-            </a>
-          </li>
-        </ul>
+        <!-- NAV PROJETS -->
+        <nav class="nav-section">
+
+          <ul class="nav-group">
+            <li><span class="nav-label">PROJETS</span></li>
+            <li class="nav-item">
+              <a href="#veyloria" class="nav-link" aria-label="Projets">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#cs2" class="nav-link" aria-label="Compétences">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-crosshair" viewBox="0 0 16 16">
+                  <path
+                    d="M8.5.5a.5.5 0 0 0-1 0v.518A7 7 0 0 0 1.018 7.5H.5a.5.5 0 0 0 0 1h.518A7 7 0 0 0 7.5 14.982v.518a.5.5 0 0 0 1 0v-.518A7 7 0 0 0 14.982 8.5h.518a.5.5 0 0 0 0-1h-.518A7 7 0 0 0 8.5 1.018zm-6.48 7A6 6 0 0 1 7.5 2.02v.48a.5.5 0 0 0 1 0v-.48a6 6 0 0 1 5.48 5.48h-.48a.5.5 0 0 0 0 1h.48a6 6 0 0 1-5.48 5.48v-.48a.5.5 0 0 0-1 0v.48A6 6 0 0 1 2.02 8.5h.48a.5.5 0 0 0 0-1zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#qrypta" class="nav-link" aria-label="Parcours">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-speedometer2" viewBox="0 0 16 16">
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4M3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.39.39 0 0 0-.029-.518z" />
+                  <path fill-rule="evenodd"
+                    d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A8 8 0 0 1 0 10m8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3" />
+                </svg>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#scootex" class="nav-link" aria-label="Contact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-scooter"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M9 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-.39l1.4 7a2.5 2.5 0 1 1-.98.195l-.189-.938-2.43 3.527A.5.5 0 0 1 9.5 13H4.95a2.5 2.5 0 1 1 0-1h4.287l2.831-4.11L11.09 3H9.5a.5.5 0 0 1-.5-.5M3.915 12a1.5 1.5 0 1 0 0 1H2.5a.5.5 0 0 1 0-1zm8.817-.789A1.499 1.499 0 0 0 13.5 14a1.5 1.5 0 0 0 .213-2.985l.277 1.387a.5.5 0 0 1-.98.196z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
       </nav>
     </aside>
 
     <!-- Panneau central -->
     <div class="main-frame">
-
       <!-- En-tête -->
       <header class="frame-header">
         <div class="left">
           <div class="badge-year">ZW 2025</div>
           <div class="left-text">
             <p class="name">Zackary Warren</p>
-            <p class="role">Intégrateur Front-End • Accessibilité &amp; Performance</p>
+            <p class="role">
+              Intégrateur Front-End • Accessibilité &amp; Performance
+            </p>
           </div>
         </div>
 
@@ -99,12 +134,13 @@
 
       <hr class="main-separator" />
 
+      <!-- Contenu principal -->
       <div class="content-frame">
-
         <!-- Présentation (Gauche) -->
         <section class="hero-left">
           <div class="category-badge">
-            <span class="dot">•</span> INTÉGRATION WEB &amp; CRÉATIVITÉ FRONT-END
+            <span class="dot">•</span> INTÉGRATION WEB &amp; CRÉATIVITÉ
+            FRONT-END
           </div>
 
           <h1 class="main-title">
@@ -112,12 +148,13 @@
           </h1>
 
           <p class="description">
-            Bonjour ! Je m'appelle Zackary Warren. Finissant en intégration multimédia au Collège Montmorency,
-            je conçois et façonne des expériences numériques interactives pour le web de demain.
+            Bonjour ! Je m'appelle Zackary Warren. Finissant en intégration
+            multimédia au Collège Montmorency, je conçois et façonne des
+            expériences numériques interactives pour le web de demain.
           </p>
 
           <a href="/cv-zackary-warren.pdf" download
-            class="btn-cv flex w-full sm:max-w-max items-center justify-center gap-2 px-4 sm:px-6 py-3">
+            class="btn-cv">
             <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20 15V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18L4 15M8 11L12 15M12 15L16 11M12 15V3"
@@ -143,13 +180,14 @@
 
         <!-- Carte UI / Terminal & Compétences (Droite) -->
         <section class="profile-card">
-
           <header class="card-header">
             <div class="avatar-box">ZW</div>
             <div class="profile-meta">
               <h2 class="name">Zackary Warren</h2>
               <p class="job">Développeur Front-End &amp; Intégrateur UI</p>
-              <p class="mobility">Saint-Eustache, Canada • Mobilité &amp; Télétravail</p>
+              <p class="mobility">
+                Saint-Eustache, Canada • Mobilité &amp; Télétravail
+              </p>
             </div>
             <span class="tag-dev">#dev</span>
           </header>
@@ -171,11 +209,10 @@
             <div class="terminal-separator"></div>
 
             <pre><code><span class="keyword">const</span> <span class="variable">integrator</span> = {
-  <span class="property">formation</span>: <span class="string">'Technique d\'intégration multimédia'</span>,
-  <span class="property">prochaineEtape</span>: <span class="string">'Baccalauréat en génie logiciel'</span>,
-  <span class="property">valeur</span>: [<span class="string">'Fiable'</span>, <span class="string">'Autonomie'</span>, <span class="string">'Curieux'</span>],
-  <span class="property">disponiblePour</span>: <span class="string">'Stage temps plein (mars-mai 2027)'</span>,
-};</code></pre>
+            <span class="property">formation</span>: <span class="string">'Technique d\'intégration multimédia'</span>,
+            <span class="property">prochaineEtape</span>: <span class="string">'Baccalauréat en génie logiciel'</span>,
+            <span class="property">valeur</span>: [<span class="string">'Fiable'</span>, <span class="string">'Autonomie'</span>, <span class="string">'Curieux'</span>],
+            <span class="property">disponiblePour</span>: <span class="string">'Stage temps plein (mars-mai 2027)'</span>,};</code></pre>
           </div>
 
           <hr class="card-separator" />
@@ -191,7 +228,7 @@
                   <span class="pct">90%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 90%;"></div>
+                  <div class="fill" style="width: 90%"></div>
                 </div>
                 <p class="keywords">Sémantique • W3C • Canvas</p>
               </div>
@@ -202,7 +239,7 @@
                   <span class="pct">90%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 90%;"></div>
+                  <div class="fill" style="width: 90%"></div>
                 </div>
                 <p class="keywords">Flexbox • Grid • Tailwind</p>
               </div>
@@ -213,7 +250,7 @@
                   <span class="pct">85%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 85%;"></div>
+                  <div class="fill" style="width: 85%"></div>
                 </div>
                 <p class="keywords">DOM • ES6+ • Anime.js</p>
               </div>
@@ -224,7 +261,7 @@
                   <span class="pct">75%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 75%;"></div>
+                  <div class="fill" style="width: 75%"></div>
                 </div>
                 <p class="keywords">WordPress • Elementor • ACF</p>
               </div>
@@ -235,7 +272,7 @@
                   <span class="pct">80%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 80%;"></div>
+                  <div class="fill" style="width: 80%"></div>
                 </div>
                 <p class="keywords">Versionnage • CLI • Workflows</p>
               </div>
@@ -246,7 +283,7 @@
                   <span class="pct">60%</span>
                 </div>
                 <div class="progress-bar">
-                  <div class="fill" style="width: 60%;"></div>
+                  <div class="fill" style="width: 60%"></div>
                 </div>
                 <p class="keywords">Bases POO • Algorithmes</p>
               </div>
@@ -262,17 +299,16 @@
         </section>
       </div>
 
+      <!-- Contenu du projet -->
       <div class="content-frame-project">
-
         <!-- Colonne Gauche : Aperçu & Actions -->
         <section class="project-preview">
-
           <!-- En-tête du projet -->
           <header class="project-header">
             <h1 class="main-title-project">
               <span class="project-number">01.</span> Lorem<span class="cursor">|</span>
             </h1>
-            <p class="description-project"> Lorem </p>
+            <p class="description-project">Lorem</p>
           </header>
 
           <!-- Carrousel d'aperçus -->
@@ -295,78 +331,85 @@
 
           <!-- Boutons -->
           <div class="project-actions">
-
             <a href="https://example.com/qrypta" target="_blank" rel="noopener noreferrer"
               class="btn-action btn-primary">
-              <svg> <!-- Icône Œil --> </svg>
+              <svg><!-- Icône Œil --></svg>
               <span>Visiter le site live</span>
             </a>
 
             <a href="https://github.com/ton-profil/qrypta" target="_blank" rel="noopener noreferrer"
               class="btn-action btn-secondary">
-              <svg> <!-- Icône GitHub --> </svg>
+              <svg><!-- Icône GitHub --></svg>
               <span>Répertoire Github</span>
             </a>
 
             <button type="button" class="btn-action btn-secondary" aria-haspopup="dialog">
-              <svg> <!-- Logo info --> </svg>
+              <svg><!-- Logo info --></svg>
               <span>En savoir plus</span>
             </button>
           </div>
 
+          <!-- Modal Info projet -->
+          <div id="modalInfo" class="modal">
+            <div class="modal-content">
+              <span class="close">×</span>
+              <h1>Informations sur le projet</h1>
+              <p>Some text in the Modal..</p>
+              <p>More information about the project...</p>
+              <p>This is a simple modal dialog.</p>
+            </div>
+          </div>
         </section>
 
         <!-- Colonne Droite : Détails & Stacks -->
         <aside class="project-details">
-
           <!-- Section Description -->
           <div class="details-block">
             <h2 class="details-heading">Description du projet</h2>
             <p class="details-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1960s,
-              when designers at Letraset and James Mosley, the librarian at St Bride
-              Printing Library in London, took a 1914 Cicero translation and scrambled it to
-              make dummy text for Letraset's Body Type sheets.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1960s, when designers at Letraset and James
+              Mosley, the librarian at St Bride Printing Library in London,
+              took a 1914 Cicero translation and scrambled it to make dummy
+              text for Letraset's Body Type sheets.
             </p>
           </div>
 
           <!-- Section Technologies -->
           <div class="details-block">
-            <h2 class="details-heading">Technologie utilisé</h2>
+            <h2 class="details-heading">Technologie utilisés</h2>
             <div class="tech-stack-badges">
               <div class="badge-tech badge-html" title="HTML">
-                <svg> <!-- Logo HTML5 --> </svg>
+                <svg><!-- Logo HTML5 --></svg>
               </div>
               <div class="badge-tech badge-css" title="CSS">
-                <svg> <!-- Logo CSS3 --> </svg>
+                <svg><!-- Logo CSS3 --></svg>
               </div>
 
               <div class="badge-tech badge-js" title="JavaScript">
-                <svg> <!-- Logo JS --></svg>
+                <svg><!-- Logo JS --></svg>
               </div>
             </div>
           </div>
-
         </aside>
-
       </div>
 
       <hr class="main-separator" />
 
       <!-- Bas de page -->
       <footer class="frame-footer">
-        <p class="copyright">&copy; 2026 Zackary Warren | Tous droits réservés.</p>
+        <p class="copyright">
+          &copy; 2026 Zackary Warren | Tous droits réservés.
+        </p>
         <div class="status-notes">
           <span>Recherche active : Dès Septembre 2026</span>
           <span class="bullet" aria-hidden="true">&bull;</span>
           <span>Convention de stage d'école prête</span>
         </div>
       </footer>
-
     </div>
   </main>
-
 </body>
 
 </html>

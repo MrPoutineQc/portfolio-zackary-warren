@@ -1,0 +1,191 @@
+/* STYLE GLOBALE */
+.sidebar,
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-group {
+    background-color: var(--navbar-color);
+    border: 1.5px solid var(--navbar-stroke);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 12px;
+    padding-top: 24px;
+    color: var(--text-primary-color);
+    gap: 0.8rem;
+    max-width: 4.25rem;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(0px 0px 35px #00000099);
+    box-shadow: 0px 0px 35px #00000099;
+    list-style: none;
+
+    /* SVG */
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 1vh;
+        fill: var(--navbar-svg-color);
+    }
+
+    a {
+        border-radius: 15px;
+        transition: ease-in-out 0.3s;
+        text-decoration: none;
+
+    }
+
+    a:hover {
+        background-color: var(--button-color-hover);
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        filter: drop-shadow(var(--button-drop-shadow));
+        border-radius: 15px;
+
+        svg path {
+            fill: var(--svg-color-hover);
+        }
+    }
+
+    a:active {
+        background-color: var(--button-color-hover);
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        filter: drop-shadow(var(--button-drop-shadow));
+        border-radius: 15px;
+
+        svg path {
+            fill: var(--svg-color-hover);
+        }
+    }
+
+    /* TEXTE PROJETS */
+    .nav-label {
+        font-size: clamp(0.8rem, 1vw, 0.5rem);
+        color: var(--text-primary-color);
+        font-family: var(--font-global);
+    }
+
+    /* LOGO LETTRE */
+    .avatar-tag {
+        font-family: var(--font-global);
+        font-weight: 400;
+        font-size: clamp(1rem, 1vw, 1.5rem);
+        color: var(--text-primary-color);
+        background-color: var(--orbs-primary-color);
+        border-radius: 50%;
+        border: 1.5px solid var(--navbar-stroke);
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* SÉPARATEUR */
+.nav-separator {
+    width: 100%;
+    max-width: 3.5rem;
+    min-width: 3.5rem;
+    height: 0.125rem;
+    background-color: var(--text-secondary-color);
+    margin: 10px 0;
+}
+
+/* RESPONSIVE TABLETTE ET MOBILE */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        width: fit-content;
+        max-width: 75%;
+        margin: 0;
+        padding: 0.45rem 0.95rem;
+        background-color: var(--navbar-color);
+        border: 1.5px solid var(--navbar-stroke);
+        border-radius: 100px;
+        box-shadow: 0px 0px 35px #00000099;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        gap: 0.5rem;
+    }
+
+    .nav-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+        width: auto;
+        max-width: none;
+        padding: 0.3rem 0.45rem;
+        border-radius: 999px;
+        min-height: 3.1rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        filter: none;
+        backdrop-filter: none;
+    }
+
+    .nav-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .nav-section .nav-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .nav-separator {
+        display: none;
+    }
+
+    .nav-label {
+        display: none;
+    }
+
+    .avatar-tag {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1rem;
+    }
+
+    .nav-group svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.75rem;
+    }
+}

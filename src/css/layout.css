@@ -5,6 +5,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* Cercles lumineux */
 .orbs-top {
     display: flex;
     position: absolute;
@@ -32,3 +33,7 @@ body {
     filter: blur(clamp(24px, 5vmin, 64px));
     z-index: -2;
 }
+
+
+.main-frame {   display: none; {}
+
