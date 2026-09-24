@@ -41,3 +41,19 @@
 - **Prompt :**
   - *Prompt #1 :* Est-ce que mon html correspond a mon design si non qu'est-ce qu'il a modifier et améliorer ? .
 - **Résultat :** Gemini à dit « La structure globale est une excellente base, mais plusieurs éléments sémantiques, hiérarchiques et visuels ne correspondent pas fidèlement à la maquette. » Il m'a ensuite renvoyer le code avec les corrections.
+
+
+## 2. Écriture du HTML 
+
+- **Date :** 23 Septembre 2026
+- **Outil :** Copilot x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Pourrais tu supprimer les classes tailwind ainsi que le CDN et transféré le responsive au sein du dossier navbar.css .
+- **Résultat :** Gemini m'a fait un résultat pas très convaincant, alors j'ai décidé de prendre son code et de l'envoyer vers Claude.
+
+
+- **Date :** 23 Septembre 2026
+- **Outil :** Claude x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Voici le code de ma navbar il y a beaucoup d'erreur fix pour qu'elle ressemble a mon design (J'ai joint des images de mon design origine).
+- **Résultat :** Claude a très bien réussi la tâche, son code est beaucoup plus clair et lisible que Copilot. Je peux maintenant rajouter les dernières touches finales sans me perdre dans le code.

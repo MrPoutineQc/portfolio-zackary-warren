@@ -1,6 +1,11 @@
+/* STYLE BODY */
 body {
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
     overflow: hidden;
     background-color: var(--background-color);
 }
@@ -34,6 +39,52 @@ body {
     z-index: -2;
 }
 
+/* Particles.JS (Sans le css les particules pousses le contenue vers le bas) */
+#particles-js {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
 
-.main-frame {   display: none; {}
+.content-frame-project {
+    display: none;
+}
 
+/* STYLE DU MAIN */
+.main-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1400px;
+    height: 80vh;
+    overflow: hidden;
+    background: var(--background-main);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding: 4vh;
+}
+
+.frame-header {
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.content-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-frame {
+    display: flex;
+    align-items: center;
+}

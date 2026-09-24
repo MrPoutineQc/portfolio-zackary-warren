@@ -1,18 +1,32 @@
 /* STYLE DE BOUTON */
 button {
+    display: flex;
+    padding: 0.5rem 1rem;
     background-color: var(--button-color);
     border-radius: 8px;
     border: 2px solid var(--button-stroke);
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        filter 0.3s ease-in-out;
 
-    p {
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+    }
+
+    span {
         color: var(--text-secondary-color);
         font: var(--font-global);
         font-weight: 600;
     }
 
     svg {
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     svg path {
@@ -20,15 +34,23 @@ button {
     }
 }
 
+/* TABLETTE / DESKTOP */
+@media (min-width: 640px) {
+    button {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
 /* HOVER BOUTON */
 button:hover {
     background-color: var(--button-color-hover);
     cursor: pointer;
-    transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    filter:drop-shadow(var(--button-drop-shadow));
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        filter 0.3s ease-in-out;
 
-
-    p {
+    span {
         color: var(--button-text-color);
     }
 
