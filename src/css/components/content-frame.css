@@ -1,0 +1,283 @@
+/* MAIN */
+.content-frame {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+  gap: 8vw;
+
+  /* CÔTÉ GAUCHE MAIN */
+  .hero-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0rem 1rem;
+
+    .main-title {
+      font-family: var(--font-global);
+      font-size: clamp(4rem, 7vw, 7rem);
+      line-height: 1;
+      font-weight: 700;
+      color: var(--text-primary-color);
+      margin: 0;
+    }
+
+    .description {
+      font-family: var(--font-global);
+      font-size: clamp(0.5rem, 1vw, 1rem);
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--text-secondary-color);
+      margin: 0;
+      max-width: 600px;
+    }
+
+    .category-badge {
+      width: fit-content;
+      padding: 0.35rem;
+      border-radius: 50px;
+      border: 1.5px solid var(--button-stroke);
+      background-color: var(--button-color);
+      color: var(--text-secondary-color);
+      font-family: var(--font-global);
+      font-size: 0.85rem;
+      font-weight: 500;
+      box-shadow: 0px 0px 25px #00000099;
+      backdrop-filter: blur(5px);
+    }
+
+    button {
+      width: fit-content;
+      padding: 0.8rem 1rem;
+    }
+
+    /* SVG MÉDIAS SOCIAUX */
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .social-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: var(--button-color);
+        border: 1.5px solid var(--button-stroke);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: var(--button-color-hover);
+          svg {
+            fill: var(--svg-color-hover);
+          }
+        }
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: var(--svg-color);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .main-separator {
+      width: 100%;
+    }
+  }
+
+  /* CÔTÉ DROIT MAIN */
+
+  .hero-right {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+
+    .profile-card {
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 552px;
+      border-radius: 15px;
+      background-color: var(--background-card);
+      border: 1.5px solid var(--button-stroke);
+      box-shadow: 0px 0px 25px #00000099;
+      backdrop-filter: blur(5px);
+      padding: 0.75rem 1rem;
+
+      /* HEADER PROFIL */
+      .card-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .avatar-box {
+          font-family: var(--font-global);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--button-color);
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 15px;
+          border: 2px solid var(--button-stroke);
+        }
+
+        .profile-meta {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          line-height: 0.08rem;
+          .name {
+            font-family: var(--font-global);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+          }
+
+          .job {
+            font-family: var(--font-global);
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-secondary-color);
+          }
+
+          .mobility {
+            font-family: var(--font-global);
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-tertiary-color);
+          }
+        }
+
+        .tag-dev {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          font-family: var(--font-global);
+          font-size: 0.75rem;
+          font-weight: 400;
+          color: var(--svg-color-hover);
+          background-color: var(--button-color-hover);
+          padding: 0.25rem 0.5rem;
+          border-radius: 5px;
+          box-shadow: var(--button-color-hover) 0px 0px 10px;
+          backdrop-filter: blur(5px);
+        }
+      }
+      /* SÉPARATEUR PROFIL */
+      .card-separator {
+        align-self: center;
+        width: 100%;
+        border: 1px solid var(--separator-card-color);
+        margin: 2vh 0;
+        border-radius: 50px;
+      }
+
+      /* CONSOLE PROFIL */
+      .code-terminal {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        max-width: 90%;
+        padding: 0.25rem;
+        border-radius: 15px;
+        background-color: var(--background-terminal);
+        border: 1px solid var(--button-stroke);
+        box-shadow: 0px 0px 25px #00000099;
+        backdrop-filter: blur(5px);
+
+        .terminal-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+          height: 2rem;
+
+          /* HEADER CONSOLE */
+          .window-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .dot {
+              width: 0.75rem;
+              height: 0.75rem;
+              border-radius: 50%;
+              display: inline-block;
+            }
+            .red {
+              background-color: #ff5f56;
+            }
+            .yellow {
+              background-color: #ffbd2e;
+            }
+            .green {
+              background-color: #27c93f;
+            }
+
+            .file-name {
+              font-family: var(--font-global);
+              font-size: 0.75rem;
+              font-weight: 400;
+              color: var(--text-secondary-color);
+            }
+          }
+          .badge-ready {
+            font-family: var(--font-global);
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-secondary-color);
+          }
+        }
+        /* SÉPARATEUR TERMINAL */
+        .terminal-separator {
+          align-self: center;
+          width: 90%;
+          height: 1px;
+          background-color: var(--button-stroke);
+          margin: 0.5vh 0;
+          border-radius: 50px;
+        }
+
+        /* CODE DANS LA CONSOLE */
+        pre {
+          display: block;
+          font-family: "Fira Code", monospace;
+          font-size: 0.75rem;
+          font-weight: 400;
+          color: var(--text-secondary-color);
+          margin: 0;
+          padding: 1rem;
+          width: 90%;
+          line-height: 1.25rem;
+
+          .keyword {
+            color: #c792ea;
+          }
+
+          .variable {
+            color: #f07178;
+          }
+
+          .string {
+            color: #c3e88d;
+          }
+        }
+      }
+    }
+  }
+}

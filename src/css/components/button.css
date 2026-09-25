@@ -1,5 +1,5 @@
 /* STYLE DE BOUTON */
-button {
+button{
     display: flex;
     padding: 0.5rem 1rem;
     background-color: var(--button-color);
@@ -42,7 +42,7 @@ button {
 }
 
 /* HOVER BOUTON */
-button:hover {
+button{
     background-color: var(--button-color-hover);
     cursor: pointer;
     transition:
