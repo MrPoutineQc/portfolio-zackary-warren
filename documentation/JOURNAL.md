@@ -57,3 +57,17 @@
 - **Prompt :**
   - *Prompt #1 :* Voici le code de ma navbar il y a beaucoup d'erreur fix pour qu'elle ressemble a mon design (J'ai joint des images de mon design origine).
 - **Résultat :** Claude a très bien réussi la tâche, son code est beaucoup plus clair et lisible que Copilot. Je peux maintenant rajouter les dernières touches finales sans me perdre dans le code.
+
+
+- **Date :** 24 Septembre 2026
+- **Outil :** Claude x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Donne moi la structure seulement (grid, padding etc) du skills je vais la styliser après.
+- **Résultat :** Il m'a donné la structure du CSS pour sauver du temps ce qui ma permis de me concentrer directement sur le style.
+
+
+- **Date :** 24 Septembre 2026
+- **Outil :** Claude x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Donnne le code du layout pas du style. (HTML et photo de mon design en fichier joint)
+- **Résultat :** Il m'a donné la structure du CSS de mes « skills » pour sauver du temps ce qui ma permis de me concentrer directement sur le style.

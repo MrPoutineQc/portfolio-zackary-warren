@@ -7,13 +7,13 @@
     --background-color: #0D120F;
     --background-terminal: #0E1411;
     --background-main: radial-gradient(#23443B77 0%, #121814CC 50%, #0E1310E6 100%);
-    --background-card: linear-gradient(120deg, #23443B 38%, #121915 85%);
+    --background-card: linear-gradient(120deg, #23443B 0%, #121915 100%);
     --orbs-primary-color: #23443B;
     --orbs-secondary-color: #1A332A;
     --text-primary-color: #FFFFFF;
     --text-secondary-color: #CFF1DE;
     --text-tertiary-color: #86A394;
-    --button-color: #23443B66;
+    --button-color: #23443b38;
     --button-color-hover: #CFF1DE;
     --button-stroke: #CFF1DE4D;
     --button-text-color: #162C26;
@@ -23,6 +23,8 @@
     --navbar-color: #151C1799;
     --navbar-stroke: #CFF1DE33;
     --navbar-svg-color: #A0B5AA;
+    --separator-color: #2e594d46;
+    --separator-card-color: #2e594d8e;
     --nav-item-size: 2.75rem;
     --nav-item-radius: 15px;
 }

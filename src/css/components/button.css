@@ -21,7 +21,7 @@ button {
     span {
         color: var(--text-secondary-color);
         font: var(--font-global);
-        font-weight: 600;
+        font-weight: 700;
     }
 
     svg {
