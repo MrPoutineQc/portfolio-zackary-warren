@@ -1,63 +1,66 @@
 [
-  {
-    "id": "Veyloria",
-    "title": "Veyloria",
-    "sub-title": "Ceci est un sous-titre de Veyloria",
-    "description": "Création d’un site web présentant une planète fictive.",
-    "image": "https://picsum.photos/1920/1080",
-    "tech": [
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080"
-    ],
-    "link": "https://minecraft.net",
-    "github": "https://google.com"
-  },
-  {
-    "id": "cs2",
-    "title": "Critique de Counter-Strike 2",
-    "sub-title": "Ceci est un sous-titre de CS2",
-    "description": "Création d’un site thématique d’évaluation et de critique du jeu Counter-Strike 2, intégrant la grille et différents composants de Bootstrap ainsi que Bootstrap Icons.",
-    "image": "https://picsum.photos/1920/1080",
-    "tech": [
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080"
-    ],
-    "link": "https://github.com",
-    "github": "https://google.com"
-  },
-  {
-    "id": "qrypta",
-    "title": "Qrypta",
-    "sub-title": "Ceci est un sous-titre de Qrypta",
-    "description": "Tableau de bord de style HUD futuriste intégrant de la visualisation de données dynamiques et animées.",
-    "image": "https://picsum.photos/1920/1080",
-    "tech": [
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080"
-    ],
-    "link": "https://youtube.com",
-    "github": "https://google.com"
-  },
-
-  {
-    "id": "scootex",
-    "title": "Scootex",
-    "sub-title": "Ceci est un sous-titre de Scootex",
-    "description": "Boutique e-commerce moderne et responsive dédiée à la vente de trottinettes électriques et d'équipements de mobilité urbaine.",
-    "image": [
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080"
-    ],
-    "tech": [
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080",
-      "https://picsum.photos/1920/1080"
-    ],
-    "link": "https://google.com",
-    "github": "https://google.com"
-  }
-]
+    {
+      "id": "veyloria",
+      "number": "01.",
+      "title": "Veyloria",
+      "summary": "Une planète énigmatique et secrète, au-delà de l'imagination.",
+      "description": "Création d’un site web présentant une planète fictive.",
+      "image": "https://picsum.photos/1920/1080",
+      "tech": [
+        "/src/assets/icons/html.svg",
+        "/src/assets/icons/css.svg",
+        "/src/assets/icons/js.svg"
+      ],
+      "link": "https://minecraft.net",
+      "github": "https://google.com"
+    },
+    {
+      "id": "cs2",
+      "number": "02.",
+      "title": "Critique",
+      "summary": "Ceci est une critique du FPS Counter-Strike 2",
+      "description": "Création d’un site thématique d’évaluation et de critique du jeu Counter-Strike 2, intégrant la grille et différents composants de Bootstrap ainsi que Bootstrap Icons.",
+      "image": "https://picsum.photos/1920/1080",
+      "tech": [
+        "/src/assets/icons/html.svg",
+        "/src/assets/icons/css.svg",
+        "/src/assets/icons/js.svg"
+      ],
+      "link": "https://github.com",
+      "github": "https://google.com"
+    },
+    {
+      "id": "qrypta",
+      "number": "03.",
+      "title": "Qrypta",
+      "summary": "Ceci est un sous-titre de Qrypta",
+      "description": "Tableau de bord de style HUD futuriste intégrant de la visualisation de données dynamiques et animées.",
+      "image": "https://picsum.photos/1920/1080",
+      "tech": [
+        "/src/assets/icons/html.svg",
+        "/src/assets/icons/css.svg",
+        "/src/assets/icons/js.svg"
+      ],
+      "link": "https://youtube.com",
+      "github": "https://google.com"
+    },
+    {
+      "id": "scootex",
+      "number": "04.",
+      "title": "Scootex",
+      "summary": "Ceci est un sous-titre de Scootex",
+      "description": "Boutique e-commerce moderne et responsive dédiée à la vente de trottinettes électriques et d'équipements de mobilité urbaine.",
+      "image": [
+        "https://picsum.photos/1920/1080",
+        "https://picsum.photos/1920/1080",
+        "https://picsum.photos/1920/1080"
+      ],
+      "tech": [
+        "/src/assets/icons/html.svg",
+        "/src/assets/icons/css.svg",
+        "/src/assets/icons/js.svg"
+      ],
+      "link": "https://google.com",
+      "github": "https://google.com"
+    }
+  ]

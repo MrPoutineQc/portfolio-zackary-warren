@@ -1,3 +1,7 @@
+/* ---------------------------------------------------- */
+/*   Style de la div qui contient le contenu principal */
+/* ---------------------------------------------------*/
+
 /* MAIN */
 .content-frame {
   display: flex;
