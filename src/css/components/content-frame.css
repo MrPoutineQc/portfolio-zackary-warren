@@ -48,10 +48,6 @@
       backdrop-filter: blur(5px);
     }
 
-    button {
-      width: fit-content;
-      padding: 0.8rem 1rem;
-    }
 
     /* SVG MÉDIAS SOCIAUX */
     .social-links {
