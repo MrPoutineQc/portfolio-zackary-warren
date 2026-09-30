@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Veyloria",
+    "title": "Veyloria",
+    "description": "Identité visuelle et site web pour un café de quartier.",
+    "image": "https://picsum.photos/1920/1080",
+    "link": "https://minecraft.net"
+  },
+  {
+    "id": "cs2",
+    "title": "Critique de Counter-Strike 2",
+    "description": "Modélisation 3D d'un écosystème miniature.",
+    "image": "https://picsum.photos/1920/1080",
+    "link": "https://github.com"
+  },
+  {
+    "id": "qrypta",
+    "title": "Écho",
+    "description": "Installation interactive sonore et visuelle.",
+    "image": "https://picsum.photos/1920/1080",
+    "link": "https://youtube.com"
+  },
+
+  {
+    "id": "scootex",
+    "title": "Zeus",
+    "description": "Dieu du ciel et le roi des dieux.",
+    "image": [
+      "https://picsum.photos/1920/1080",
+      "https://picsum.photos/1920/1080",
+      "https://picsum.photos/1920/1080"
+    ],
+    "link": "https://google.com"
+  }
+]

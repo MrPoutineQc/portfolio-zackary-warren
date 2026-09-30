@@ -1,60 +1,81 @@
-/* STYLE DE BOUTON */
-button{
+/* STYLE COMMUN <button> BOUTON / <a> LIEN */
+button,
+a.btn {
+  display: flex;
+  width: fit-content;
+  padding: 0.8rem 1rem;
+  background-color: var(--button-color);
+  border-radius: 8px;
+  border: 2px solid var(--button-stroke);
+  text-decoration: none;
+  font-style: var(--font-global);
+  font-weight: 800;
+  gap: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    filter 0.3s ease-in-out;
+
+  span {
+    color: var(--text-secondary-color);
+    font: var(--font-global);
+    font-weight: 700;
     display: flex;
-    padding: 0.5rem 1rem;
-    background-color: var(--button-color);
-    border-radius: 8px;
-    border: 2px solid var(--button-stroke);
-    transition:
-        background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out,
-        filter 0.3s ease-in-out;
+    align-items: center;
+  }
 
-    .btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-    }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
 
-    span {
-        color: var(--text-secondary-color);
-        font: var(--font-global);
-        font-weight: 700;
-    }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-    svg {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
+  svg path {
+    stroke: var(--svg-color);
+  }
 
-    svg path {
-        stroke: var(--svg-color);
-    }
+  .cv {
+    stroke: var(--svg-color);
+    fill: none;
+  }
+
+  svg.bi path {
+    fill: var(--svg-color);
+    stroke: none;
+  }
 }
 
-/* TABLETTE / DESKTOP */
 @media (min-width: 640px) {
-    button {
-        padding: 0.75rem 1.5rem;
-    }
+  button,
+  a.btn {
+    padding: 0.75rem 1.5rem;
+  }
 }
 
-/* HOVER BOUTON */
-button{
-    background-color: var(--button-color-hover);
-    cursor: pointer;
-    transition:
-        background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out,
-        filter 0.3s ease-in-out;
+button:hover,
+a.btn:hover {
+  background-color: var(--button-color-hover);
+  cursor: pointer;
 
-    span {
-        color: var(--button-text-color);
-    }
+  span {
+    color: var(--button-text-color);
+  }
 
-    svg path {
-        stroke: var(--svg-color-hover);
-    }
+  svg path {
+    fill: var(--svg-color-hover);
+  }
+
+  .cv {
+    stroke: var(--svg-color-hover);
+    fill: none;
+  }
 }

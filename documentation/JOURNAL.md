@@ -71,3 +71,10 @@
 - **Prompt :**
   - *Prompt #1 :* Donnne le code du layout pas du style. (HTML et photo de mon design en fichier joint)
 - **Résultat :** Il m'a donné la structure du CSS de mes « skills » pour sauver du temps ce qui ma permis de me concentrer directement sur le style.
+
+- **Date :** 29 Septembre 2026
+- **Outil :** Claude x VsCode
+- **Prompt :**
+  - *Prompt #1 :* Pourquoi mes dots apparaissent écrasé. (CSS/HTML en fichier joint)
+- **Résultat :** Il m'a donné donné les corrections nécessaires qui causait le problème. 
+
