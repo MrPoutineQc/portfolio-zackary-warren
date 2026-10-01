@@ -41,7 +41,7 @@ function createProjectCard(project) {
         <div class="project-carousel">
           <div class="carousel-viewport">
             <ul class="carousel-track">
-              <li class="carousel-slide active">
+              <li class="carousel-slide 1 active">
                 <img src="${projectImages[0] || ""}" alt="" />
               </li>
 
