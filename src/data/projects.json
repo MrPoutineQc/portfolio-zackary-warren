@@ -13,7 +13,7 @@
       "tech": [
         "./src/assets/icons/html.svg",
         "./src/assets/icons/css.svg",
-        "/src/assets/icons/js.svg"
+        "./src/assets/icons/js.svg"
       ],
       "link": "https://minecraft.net",
       "github": "https://google.com"
