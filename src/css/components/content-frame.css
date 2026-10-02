@@ -281,7 +281,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 1024px) {
   .content-frame {
     flex-direction: column;
     gap: 2rem;

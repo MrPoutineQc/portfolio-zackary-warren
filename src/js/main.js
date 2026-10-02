@@ -11,7 +11,7 @@
 // 1. Configuration des effets visuels (Particles.js)
 // 2. Sélection des éléments du DOM & variables globales
 // 3. Écouteurs d'événements (Event Listeners)
-// 4. Fonctions métier & gestion de l'affichage
+// 4. Fonctions
 // 5. Animations (GSAP)
 //
 // ====================================================================
@@ -65,7 +65,7 @@ veyloriaProjectButton.addEventListener("click", showProject);
 projectContent.addEventListener("click", switchImage);
 
 // --------------------------------------------------------------------
-// 4. FONCTIONS MÉTIER & GESTION DE L'AFFICHAGE
+// 4. FONCTIONS
 // --------------------------------------------------------------------
 
 /**
@@ -135,7 +135,6 @@ function switchImage(e) {
   // Mise à jour de l'état actif des points et des images du carrousel
   dots.forEach((d, i) => {
     d.classList.toggle("active", i === index);
-    d.setAttribute("aria-selected", i === index);
   });
 
   // Mise à jour de l'état actif des images du carrousel
@@ -148,7 +147,7 @@ function switchImage(e) {
   console.log(`Image ${index + 1} sélectionnée`);
 
 }
-
 // --------------------------------------------------------------------
 // 5. ANIMATIONS (GSAP)
 // --------------------------------------------------------------------
+

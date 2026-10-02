@@ -189,7 +189,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .main-frame {
     background-color: none;
     border: none;
