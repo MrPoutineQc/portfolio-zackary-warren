@@ -82,3 +82,9 @@
 - **Prompt :**
   - _Prompt #1 :_ Pourquoi mes projets ne s'affichent-ils indépendamment selon le bouton sélectionné ? Analyse mon HTML, CSS et JavaScript pour m'aider à identifier la cause. En effet, mes différents projets s'affichent avec display:flex. et display:none pour les cacher. Alors, quand je suis à l'accueil et que je veux afficher le projet Veyloria, alors il devient display flex le contenu, mais uniquement l'id Veyloria est affiché (CSS/HTML en fichier joint)
 - **Résultat :** Il m'a donné donné les corrections nécessaires qui causait le problème.
+
+- **Date :** 1 octobre 2026
+- **Outil :** Claude x VsCode
+- **Prompt :**
+  - _Prompt #1 :_ Trouve-moi l'erreur qui m'empêche d'exécuter la fonction switchimage (HTML/JS en fichier joint)
+- **Résultat :** J'avais fait une partie du code, cependant elle ne fonctionnait pas comme je le voulais. Alors je lui ai demandé ce qui causait l'erreur et il m'a corrigé tout en m'expliquant

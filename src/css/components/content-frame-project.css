@@ -136,6 +136,7 @@
       gap: 0.5rem;
 
       .dot {
+        appearance: none;
         flex-shrink: 0;
         width: 0.8rem;
         aspect-ratio: 1;
@@ -152,6 +153,10 @@
 
         &:hover {
           background-color: var(--text-tertiary-color);
+        }
+
+        &:checked {
+          background-color: var(--text-primary-color);
         }
       }
     }

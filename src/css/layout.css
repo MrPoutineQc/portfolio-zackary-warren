@@ -68,8 +68,6 @@ body {
   color: var(--text-primary-color);
 }
 
-
-
 /* HEADER */
 .frame-header {
   display: flex;
@@ -188,5 +186,39 @@ body {
     padding: 2vh 2vh;
     height: 84vh;
     margin-bottom: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-frame {
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    overflow-y: visible;
+    width: 100%;
+  }
+
+  .frame-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      display: none;
+    }
+  }
+
+  .frame-footer {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    .main-separator {
+      display: none;
+    }
   }
 }

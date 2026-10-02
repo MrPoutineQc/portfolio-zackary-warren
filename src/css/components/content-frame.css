@@ -30,7 +30,7 @@
 
     .description {
       font-family: var(--font-global);
-      font-size: clamp(0.5rem, 1vw, 1rem);
+      font-size: clamp(0.8rem, 1vw, 1rem);
       line-height: 1.5;
       font-weight: 400;
       color: var(--text-secondary-color);
@@ -51,7 +51,6 @@
       box-shadow: 0px 0px 25px #00000099;
       backdrop-filter: blur(5px);
     }
-
 
     /* SVG MÉDIAS SOCIAUX */
     .social-links {
@@ -277,6 +276,28 @@
             color: #c3e88d;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content-frame {
+    flex-direction: column;
+    gap: 2rem;
+    overflow-x: visible ;
+
+    .hero-left,
+    .hero-right {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+    .hero-right {
+      .profile-card {
+        width: 100%;
+        max-width: 100%;
       }
     }
   }

@@ -3,31 +3,30 @@
 // Description  : Chargement asynchrone des données et rendu dynamique des projets
 // ==============================================================================
 
-
 // ------------------------------------------------------------------------------
 // 1. SERVICES DE DONNÉES (FETCH API)
 // ------------------------------------------------------------------------------
 
 async function loadProjects() {
-  const response = await fetch('/src/data/projects.json');
+  const response = await fetch("/src/data/projects.json");
   const projects = await response.json();
   return projects;
 }
 
-
 // ------------------------------------------------------------------------------
 // 2. INITIALISATION & INJECTION DANS LE DOM
 // ------------------------------------------------------------------------------
+
+const projectContent = document.querySelector(".content-frame-project");
 
 async function init() {
   const projects = await loadProjects();
   console.table(projects);
 
   projects.forEach((project) => {
-    projectContent.insertAdjacentHTML('beforeend', createProjectCard(project));
+    projectContent.insertAdjacentHTML("beforeend", createProjectCard(project));
   });
 }
-
 
 // ------------------------------------------------------------------------------
 // 3. GÉNÉRATEURS DE TEMPLATES (COMPOSANTS HTML)
@@ -77,9 +76,9 @@ function createProjectCard(project) {
 
           <!-- Points de pagination du carrousel -->
           <div class="carousel-dots" role="tablist" aria-label="Navigation des captures">
-            <button class="dot primary active" role="tab" aria-selected="true" aria-label="Image 1"></button>
-            <button class="dot secondary" role="tab" aria-selected="false" aria-label="Image 2"></button>
-            <button class="dot tertiary" role="tab" aria-selected="false" aria-label="Image 3"></button>
+            <input type="radio" group="carousel" name="carousel-${project.id}" class="dot primary" checked role="tab" aria-selected="true" aria-label="Image 1"></input>
+            <input type="radio" group="carousel" name="carousel-${project.id}" class="dot secondary" role="tab" aria-selected="false" aria-label="Image 2"></input>
+            <input type="radio" group="carousel" name="carousel-${project.id}" class="dot tertiary" role="tab" aria-selected="false" aria-label="Image 3"></input>
           </div>
         </div>
 
@@ -127,15 +126,11 @@ function createProjectCard(project) {
         <div class="details-block">
           <h2 class="details-heading">Technologies utilisées</h2>
           <div class="tech-stack-badges">
-            <div class="badge-tech" title="">
-              <img class="tech-icons" src="${project.tech[0] || ""}" alt="Logo technologie 1" />
-            </div>
-            <div class="badge-tech" title="">
-              <img class="tech-icons" src="${projectTech[1] || projectTech[0] || ""}" alt="Logo technologie 2" />
-            </div>
-            <div class="badge-tech" title="">
-              <img class="tech-icons" src="${projectTech[2] || projectTech[0] || ""}" alt="Logo technologie 3" />
-            </div>
+            ${projectTech
+              .map(
+                (tech) => `<div class="badge-tech" title="${tech}">
+                <img class="tech-icons" src="${tech}" alt="Icône de la technologie" />
+              </div>`,).join("")}
           </div>
         </div>
       </aside>
@@ -144,9 +139,9 @@ function createProjectCard(project) {
   `;
 }
 
-
 // ------------------------------------------------------------------------------
 // 4. EXÉCUTION
 // ------------------------------------------------------------------------------
 
-init();
+const isDataLoaded = init();
+export { isDataLoaded };
