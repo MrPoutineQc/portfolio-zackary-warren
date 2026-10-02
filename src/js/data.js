@@ -1,12 +1,23 @@
+// ==============================================================================
+// Fichier      : data.js
+// Description  : Chargement asynchrone des données et rendu dynamique des projets
+// ==============================================================================
+
+
 // ------------------------------------------------------------------------------
-// Fichier : data.js
-// Description : Gestion des données du portfolio
+// 1. SERVICES DE DONNÉES (FETCH API)
 // ------------------------------------------------------------------------------
+
 async function loadProjects() {
   const response = await fetch('/src/data/projects.json');
   const projects = await response.json();
   return projects;
 }
+
+
+// ------------------------------------------------------------------------------
+// 2. INITIALISATION & INJECTION DANS LE DOM
+// ------------------------------------------------------------------------------
 
 async function init() {
   const projects = await loadProjects();
@@ -15,8 +26,12 @@ async function init() {
   projects.forEach((project) => {
     projectContent.insertAdjacentHTML('beforeend', createProjectCard(project));
   });
-
 }
+
+
+// ------------------------------------------------------------------------------
+// 3. GÉNÉRATEURS DE TEMPLATES (COMPOSANTS HTML)
+// ------------------------------------------------------------------------------
 
 function createProjectCard(project) {
   const projectImages = Array.isArray(project.image)
@@ -25,10 +40,15 @@ function createProjectCard(project) {
   const projectTech = Array.isArray(project.tech) ? project.tech : [];
 
   return `
-    <!-- Colonne Gauche : Aperçu & Actions -->
+    <!-- Conteneur principal du projet -->
     <div class="single-project-container" id="project-${project.id}">
+      
+      <!-- ========================================== -->
+      <!-- COLONNE GAUCHE : APERÇU, CARROUSEL & ACTIONS -->
+      <!-- ========================================== -->
       <section class="project-preview">
-        <!-- En-tête du projet -->
+        
+        <!-- En-tête : Titre & résumé -->
         <header class="project-header">
           <h1 class="main-title-project">
             <span class="project-number">${project.number}</span>
@@ -37,25 +57,25 @@ function createProjectCard(project) {
           <p class="description-project">${project.summary}</p>
         </header>
 
-        <!-- Carrousel d'aperçus -->
+        <!-- Galerie d'images / Carrousel -->
         <div class="project-carousel">
           <div class="carousel-viewport">
             <ul class="carousel-track">
               <li class="carousel-slide 1 active">
-                <img src="${projectImages[0] || ""}" alt="" />
+                <img src="${projectImages[0] || ""}" alt="Capture d'écran principale du projet ${project.title}" />
               </li>
 
               <li class="carousel-slide 2 inactive">
-                <img src="${projectImages[1] || projectImages[0] || ""}" alt="" />
+                <img src="${projectImages[1] || projectImages[0] || ""}" alt="Capture d'écran secondaire du projet ${project.title}" />
               </li>
 
               <li class="carousel-slide 3 inactive">
-                <img src="${projectImages[2] || projectImages[0] || ""}" alt="" />
+                <img src="${projectImages[2] || projectImages[0] || ""}" alt="Capture d'écran complémentaire du projet ${project.title}" />
               </li>
             </ul>
           </div>
 
-          <!-- Indicateurs de pagination (les 3 points sous l'image) -->
+          <!-- Points de pagination du carrousel -->
           <div class="carousel-dots" role="tablist" aria-label="Navigation des captures">
             <button class="dot primary active" role="tab" aria-selected="true" aria-label="Image 1"></button>
             <button class="dot secondary" role="tab" aria-selected="false" aria-label="Image 2"></button>
@@ -63,7 +83,7 @@ function createProjectCard(project) {
           </div>
         </div>
 
-        <!-- Boutons -->
+        <!-- Boutons d'action externes & modal -->
         <div class="project-actions">
           <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-eye-fill" viewBox="0 0 16 16">
@@ -92,34 +112,41 @@ function createProjectCard(project) {
         </div>
       </section>
 
-      <!-- Colonne Droite : Détails & Stacks -->
+      <!-- ========================================== -->
+      <!-- COLONNE DROITE : DÉTAILS & STACK TECHNIQUE -->
+      <!-- ========================================== -->
       <aside class="project-details">
-        <!-- Section Description -->
+        
+        <!-- Bloc texte : Description complète -->
         <div class="details-block">
           <h2 class="details-heading">Description</h2>
           <p class="details-text">${project.description}</p>
         </div>
 
-        <!-- Section Technologies -->
+        <!-- Bloc badges : Technologies utilisées -->
         <div class="details-block">
-          <h2 class="details-heading">Technologie utilisés</h2>
+          <h2 class="details-heading">Technologies utilisées</h2>
           <div class="tech-stack-badges">
             <div class="badge-tech" title="">
-              <img class="tech-icons" src="${project.tech[0] || ""}" alt="allo" />
+              <img class="tech-icons" src="${project.tech[0] || ""}" alt="Logo technologie 1" />
             </div>
             <div class="badge-tech" title="">
-              <img class="tech-icons" src="${projectTech[1] || projectTech[0] || ""}" alt="" />
+              <img class="tech-icons" src="${projectTech[1] || projectTech[0] || ""}" alt="Logo technologie 2" />
             </div>
-
             <div class="badge-tech" title="">
-              <img class="tech-icons" src="${projectTech[2] || projectTech[0] || ""}" alt="" />
+              <img class="tech-icons" src="${projectTech[2] || projectTech[0] || ""}" alt="Logo technologie 3" />
             </div>
           </div>
         </div>
       </aside>
+
     </div>
   `;
 }
 
-init();
 
+// ------------------------------------------------------------------------------
+// 4. EXÉCUTION
+// ------------------------------------------------------------------------------
+
+init();
