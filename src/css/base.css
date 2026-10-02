@@ -28,3 +28,9 @@
     --nav-item-size: 2.75rem;
     --nav-item-radius: 15px;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
