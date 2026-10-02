@@ -11,7 +11,7 @@ a.btn {
   font-style: var(--font-global);
   font-weight: 800;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
   box-sizing: border-box;
   transition:
     background-color 0.3s ease-in-out,
@@ -54,14 +54,6 @@ a.btn {
   }
 }
 
-@media (min-width: 640px) {
-  button,
-  a.btn {
-    padding: 0.75rem 1.5rem;
-  }
-}
-
-
 button:hover,
 a.btn:hover {
   background-color: var(--button-color-hover);
@@ -77,6 +69,34 @@ a.btn:hover {
 
   .cv {
     stroke: var(--svg-color-hover);
-    fill: none;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+
+  .mobile-wrap {
+
+    & button {
+      background-color: var(--button-color-hover);
+
+      span {
+        color: var(--button-text-color);
+      }
+
+      .cv {
+        stroke: var(--svg-color-hover);
+        fill: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+
+  button,
+  a.btn {
+    padding: 0.75rem 1.5rem;
+
   }
 }

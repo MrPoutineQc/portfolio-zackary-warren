@@ -234,9 +234,9 @@ body {
     .status-notes {
       display: none;
     }
+  }
 
-    .main-separator {
-      display: none;
-    }
+  .main-separator {
+    display: none;
   }
 }
