@@ -8,7 +8,7 @@
 // ------------------------------------------------------------------------------
 
 async function loadProjects() {
-  const response = await fetch("../data/projects.json");
+  const response = await fetch("./src/data/projects.json");
   const projects = await response.json();
   return projects;
 }
