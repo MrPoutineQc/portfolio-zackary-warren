@@ -6,13 +6,13 @@
       "summary": "Une planète énigmatique et secrète, au-delà de l'imagination.",
       "description": "Création d’un site web présentant une planète fictive.",
       "image": [
-        "/src/assets/images/veyloria_1.png",
+        "./src/assets/images/veyloria_1.png",
         "https://picsum.photos/1920/1080",
         "https://picsum.photos/1920/1080"
       ],
       "tech": [
-        "/src/assets/icons/html.svg",
-        "/src/assets/icons/css.svg",
+        "./src/assets/icons/html.svg",
+        "./src/assets/icons/css.svg",
         "/src/assets/icons/js.svg"
       ],
       "link": "https://minecraft.net",
@@ -25,15 +25,15 @@
       "summary": "Ceci est une critique du FPS Counter-Strike 2",
       "description": "Création d’un site thématique d’évaluation et de critique du jeu Counter-Strike 2, intégrant la grille et différents composants de Bootstrap ainsi que Bootstrap Icons.",
       "image": [
-        "/src/assets/images/cs2_1.png",
-        "/src/assets/images/cs2_2.png",
+        "./src/assets/images/cs2_1.png",
+        "./src/assets/images/cs2_2.png",
         "https://picsum.photos/1920/1080"
       ],
       "tech": [
-        "/src/assets/icons/html.svg",
-        "/src/assets/icons/bootstrap.svg",
-        "/src/assets/icons/css.svg",
-        "/src/assets/icons/js.svg"
+        "./src/assets/icons/html.svg",
+        "./src/assets/icons/bootstrap.svg",
+        "./src/assets/icons/css.svg",
+        "./src/assets/icons/js.svg"
       ],
       "link": "https://github.com",
       "github": "https://google.com"
@@ -45,14 +45,14 @@
       "summary": "Ceci est un sous-titre de Qrypta",
       "description": "Tableau de bord de style HUD futuriste intégrant de la visualisation de données dynamiques et animées.",
       "image": [
-        "/src/assets/images/qrypta_1.png",
+        "./src/assets/images/qrypta_1.png",
         "https://picsum.photos/1920/1080",
         "https://picsum.photos/1920/1080"
       ],
       "tech": [
-        "/src/assets/icons/html.svg",
-        "/src/assets/icons/css.svg",
-        "/src/assets/icons/js.svg"
+        "./src/assets/icons/html.svg",
+        "./src/assets/icons/css.svg",
+        "./src/assets/icons/js.svg"
       ],
       "link": "https://youtube.com",
       "github": "https://google.com"
@@ -64,13 +64,13 @@
       "summary": "Ceci est un sous-titre de Scootex",
       "description": "Boutique e-commerce moderne et responsive dédiée à la vente de trottinettes électriques et d'équipements de mobilité urbaine.",
       "image": [
-        "/src/assets/images/scootex_1.png",
+        "./src/assets/images/scootex_1.png",
         "https://picsum.photos/1920/1080",
         "https://picsum.photos/1920/1080"
       ],
       "tech": [
-        "/src/assets/icons/wordpress.svg",
-        "/src/assets/icons/css.svg"
+        "./src/assets/icons/wordpress.svg",
+        "./src/assets/icons/css.svg"
       ],
       "link": "https://google.com",
       "github": "https://google.com"
