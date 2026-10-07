@@ -10,13 +10,15 @@
         "https://picsum.photos/1920/1080",
         "https://picsum.photos/1920/1080"
       ],
+      "imageFallback": "./src/assets/images/veyloria_1.png",
       "tech": [
         "./src/assets/icons/html.svg",
         "./src/assets/icons/css.svg",
         "./src/assets/icons/js.svg"
       ],
       "link": "https://minecraft.net",
-      "github": "https://google.com"
+      "github": "https://google.com",
+      "alt": "Image de la planète Veyloria"
     },
     {
       "id": "cs2",
@@ -24,6 +26,7 @@
       "title": "Critique",
       "summary": "Ceci est une critique du FPS Counter-Strike 2",
       "description": "Création d’un site thématique d’évaluation et de critique du jeu Counter-Strike 2, intégrant la grille et différents composants de Bootstrap ainsi que Bootstrap Icons.",
+      "imageFallback": "./src/assets/images/cs2_1.png",
       "image": [
         "./src/assets/images/cs2_1.png",
         "./src/assets/images/cs2_2.png",
@@ -36,7 +39,8 @@
         "./src/assets/icons/js.svg"
       ],
       "link": "https://github.com",
-      "github": "https://google.com"
+      "github": "https://google.com",
+      "alt": "Image du site de critique de Counter-Strike 2"
     },
     {
       "id": "qrypta",
@@ -44,6 +48,7 @@
       "title": "Qrypta",
       "summary": "Ceci est un sous-titre de Qrypta",
       "description": "Tableau de bord de style HUD futuriste intégrant de la visualisation de données dynamiques et animées.",
+      "imageFallback": "./src/assets/images/qrypta_1.png",
       "image": [
         "./src/assets/images/qrypta_1.png",
         "https://picsum.photos/1920/1080",
@@ -55,7 +60,8 @@
         "./src/assets/icons/js.svg"
       ],
       "link": "https://youtube.com",
-      "github": "https://google.com"
+      "github": "https://google.com",
+      "alt": "Image du tableau de bord Qrypta"
     },
     {
       "id": "scootex",
@@ -63,6 +69,7 @@
       "title": "Scootex",
       "summary": "Ceci est un sous-titre de Scootex",
       "description": "Boutique e-commerce moderne et responsive dédiée à la vente de trottinettes électriques et d'équipements de mobilité urbaine.",
+      "imageFallback": "./src/assets/images/scootex_1.png",
       "image": [
         "./src/assets/images/scootex_1.png",
         "https://picsum.photos/1920/1080",
@@ -73,6 +80,7 @@
         "./src/assets/icons/css.svg"
       ],
       "link": "https://google.com",
-      "github": "https://google.com"
+      "github": "https://google.com",
+      "alt": "Image de la boutique e-commerce Scootex"
     }
   ]

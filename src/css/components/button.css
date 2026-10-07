@@ -69,10 +69,12 @@ a.btn:hover {
 
   .cv {
     stroke: var(--svg-color-hover);
+    fill: none;
   }
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 1024px) {
 
   .mobile-wrap {

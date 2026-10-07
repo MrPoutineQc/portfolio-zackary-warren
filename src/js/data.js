@@ -33,10 +33,17 @@ async function init() {
 // ------------------------------------------------------------------------------
 
 function createProjectCard(project) {
+  // Déclare projectImages si project.image est un tableau, sinon le transforme en tableau avec trois éléments identiques 
   const projectImages = Array.isArray(project.image)
+  // Vérifie si project.image est défini et est un tableau, sinon crée un tableau avec trois copies de l'image
     ? project.image
     : [project.image, project.image, project.image];
+
+  // Déclarer projectTech comme un tableau vide si project.tech n'est pas défini ou n'est pas un tableau
   const projectTech = Array.isArray(project.tech) ? project.tech : [];
+
+  // Déclare fallbackImage comme une chaîne vide si project.imageFallback
+  const fallbackImage = project.imageFallback || projectImages[0] || "";
 
   return `
     <!-- Conteneur principal du projet -->
@@ -61,15 +68,15 @@ function createProjectCard(project) {
           <div class="carousel-viewport">
             <ul class="carousel-track">
               <li class="carousel-slide 1 active">
-                <img src="${projectImages[0] || ""}" alt="Capture d'écran principale du projet ${project.title}" />
+                <img src="${projectImages[0] || fallbackImage}" alt="Capture d'écran principale du projet ${project.title}" />
               </li>
 
               <li class="carousel-slide 2 inactive">
-                <img src="${projectImages[1] || projectImages[0] || ""}" alt="Capture d'écran secondaire du projet ${project.title}" />
+                <img src="${projectImages[1] || fallbackImage}" alt="Capture d'écran secondaire du projet ${project.title}" />
               </li>
 
               <li class="carousel-slide 3 inactive">
-                <img src="${projectImages[2] || projectImages[0] || ""}" alt="Capture d'écran complémentaire du projet ${project.title}" />
+                <img src="${projectImages[2] || fallbackImage}" alt="Capture d'écran complémentaire du projet ${project.title}" />
               </li>
             </ul>
           </div>
@@ -143,5 +150,8 @@ function createProjectCard(project) {
 // 4. EXÉCUTION
 // ------------------------------------------------------------------------------
 
+// Permet d'initialiser le chargement des projets et de gérer les erreurs éventuelles  ( Merci William :D )
 const isDataLoaded = init();
+
+// Permet d'exporter la variable isDataLoaded pour être utilisée dans main.js
 export { isDataLoaded };
