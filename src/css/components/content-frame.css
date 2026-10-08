@@ -306,7 +306,6 @@
       max-width: 100%;
       min-width: 0;
       box-sizing: border-box;
-      padding: 0 1rem;
     }
 
     .hero-left {
@@ -316,6 +315,27 @@
         max-width: 100%;
         min-width: 0;
         box-sizing: border-box;
+
+        .card-header {
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+
+          .profile-meta {
+            
+            .name {
+              margin: clamp(0.25rem, 1vw, 0.5rem) 0;
+            }
+
+            .job {
+              margin: clamp(0.25rem, 1vw, 0.5rem) 0;
+            }
+
+            .mobility {
+              margin: clamp(0.25rem, 1vw, 0.5rem) 0;
+            }
+          }
+        }
       }
 
       .description {
@@ -340,6 +360,10 @@
     }
 
     .hero-right {
+      .profile-card {
+        width: 100%;
+      }
+
       .code-terminal {
         pre {
           max-width: 100%;
@@ -368,7 +392,7 @@
   }
 
   .code-terminal {
-    
+
     pre {
       max-width: 100%;
       overflow-x: auto;
