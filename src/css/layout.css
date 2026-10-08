@@ -116,7 +116,7 @@ body {
     align-items: center;
     gap: 1rem;
     background-color: var(--button-color);
-    padding: 0.25rem 0.5rem;
+    padding: 0.50rem 0.75rem;
     border-radius: 25px;
     border: 1px solid var(--button-stroke);
 
@@ -125,7 +125,7 @@ body {
       text-decoration: none;
       color: var(--text-secondary-color);
       font-family: var(--font-global);
-      font-size: 0.75rem;
+      font-size: 1.5rem;
       font-weight: 400;
     }
 

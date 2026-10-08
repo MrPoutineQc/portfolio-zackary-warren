@@ -151,3 +151,12 @@ function switchImage(e) {
 // 5. ANIMATIONS (GSAP)
 // --------------------------------------------------------------------
 
+
+// Animation des barres de compétences : elles apparaissent progressivement de gauche à droite.
+gsap.from(".fill", {
+  duration: 0.85,
+  scaleX: 0,
+  transformOrigin: "left",
+  ease: "power2.inOut",
+  stagger: 0.15,
+});
