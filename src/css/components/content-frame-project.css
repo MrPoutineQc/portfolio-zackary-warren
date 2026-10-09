@@ -199,7 +199,7 @@
   }
 
   p {
-    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1rem);
     line-height: 1.5;
     font-weight: 400;
     color: var(--text-primary-color);
@@ -216,11 +216,12 @@
     .badge-tech {
       display: flex;
       flex: 0 0 auto;
+      gap: 0.75rem;
 
       .tech-icons {
         display: block;
-        width: 5rem;
-        height: 5rem;
+        width: clamp(5rem, 6vw, 4rem);
+        height: clamp(5rem, 6vw, 4rem);
       }
     }
   }
@@ -229,4 +230,158 @@
 /* MODAL D'INFORMATION */
 #modalInfo {
   display: none;
+}
+
+/* GRAND ÉCRAN */
+@media (min-width: 1920px) {
+  .content-frame-project {
+    .single-project-container {
+      gap: clamp(5rem, 8vw, 10rem);
+    }
+
+    .project-preview {
+      .project-header {
+        .main-title-project {
+          font-size: clamp(4.5rem, 6vw, 7rem);
+        }
+      }
+    }
+  }
+}
+
+/* TABLETTE : empiler l'aperçu et les détails pour préserver leur lisibilité */
+@media (max-width: 1280px) {
+  .content-frame-project {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+    overflow: visible;
+
+    .single-project-container {
+      flex-direction: column;
+      gap: 3rem;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .project-preview,
+    .project-details {
+      flex: none;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .project-actions {
+      min-width: 0;
+    }
+
+    .project-preview {
+      .project-header {
+        .main-title-project {
+          font-size: clamp(3rem, 8vw, 5rem);
+        }
+      }
+
+      .project-carousel {
+        flex: none;
+        height: auto;
+
+        .carousel-viewport {
+          aspect-ratio: 16 / 9;
+          min-height: 18rem;
+        }
+      }
+    }
+
+    .project-details {
+      gap: 2rem;
+      padding-top: 0;
+
+      .tech-stack-badges {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+/* TÉLÉPHONE */
+@media (max-width: 768px) {
+  .content-frame-project {
+    .single-project-container {
+      gap: 2rem;
+    }
+
+    .project-preview {
+      padding: 0 0.5rem;
+
+      .project-header {
+        gap: 0.5rem;
+
+        .main-title-project {
+          font-size: clamp(2.75rem, 12vw, 4.5rem);
+          flex-wrap: wrap;
+        }
+
+        .description-project {
+          font-size: 0.9rem;
+        }
+      }
+
+      .project-carousel {
+        height: auto;
+
+        .carousel-viewport {
+          height: clamp(12rem, 56.25vw, 28rem);
+          min-height: 12rem;
+          flex: none;
+        }
+      }
+
+      .project-actions {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .project-details {
+      padding: 0 0.5rem;
+
+      h2 {
+        font-size: 1.85rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+/* PETIT TÉLÉPHONE */
+@media (max-width: 480px) {
+  .content-frame-project {
+    .project-preview {
+      .project-header {
+        .main-title-project {
+          font-size: clamp(2.5rem, 16vw, 3.75rem);
+        }
+      }
+
+      .project-actions {
+        flex-direction: column;
+        align-items: stretch;
+
+        .btn {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

@@ -48,10 +48,7 @@ function createProjectCard(project) {
   return `
     <!-- Conteneur principal du projet -->
     <div class="single-project-container" id="project-${project.id}">
-      
-      <!-- ========================================== -->
-      <!-- COLONNE GAUCHE : APERÇU, CARROUSEL & ACTIONS -->
-      <!-- ========================================== -->
+    
       <section class="project-preview">
         
         <!-- En-tête : Titre & résumé -->
@@ -118,9 +115,6 @@ function createProjectCard(project) {
         </div>
       </section>
 
-      <!-- ========================================== -->
-      <!-- COLONNE DROITE : DÉTAILS & STACK TECHNIQUE -->
-      <!-- ========================================== -->
       <aside class="project-details">
         
         <!-- Bloc texte : Description complète -->

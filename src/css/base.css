@@ -29,8 +29,27 @@
     --nav-item-radius: 15px;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Style des scrollbars */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--button-stroke) var(--background-color);
+}
+
+html::-webkit-scrollbar {
+    width: 0.65rem;
+    height: 0.65rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--orbs-primary-color);
+    border: 2px solid var(--background-color);
+    border-radius: 50px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--button-color-hover);
 }

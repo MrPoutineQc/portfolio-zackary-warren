@@ -64,6 +64,7 @@ cs2ProjectButton.addEventListener("click", showProject);
 veyloriaProjectButton.addEventListener("click", showProject);
 projectContent.addEventListener("click", switchImage);
 
+
 // --------------------------------------------------------------------
 // 4. FONCTIONS
 // --------------------------------------------------------------------
