@@ -161,3 +161,77 @@ gsap.from(".fill", {
   ease: "power2.inOut",
   stagger: 0.15,
 });
+
+// Animation machine à écrire pour le titre principal 
+gsap.to(".main-title", {
+  text: { value: "Zackary Warren." },
+  duration: 1.5,
+  ease: "none",
+});
+
+// Animation machine à écrire pour la description principale
+gsap.to(".description", {
+  text: { value: "Bonjour ! Je m'appelle Zackary Warren. Finissant en intégration multimédia au Collège Montmorency, je conçois et façonne des expériences numériques interactives pour le web de demain." },
+  duration: 2.5,
+  ease: "none",
+});
+
+// Animation de texte avec effet "Matrix" pour le statut de disponibilité
+gsap.to(".matrix", {
+  scrambleText: {
+    text: "Disponible pour stage (3 mois)",
+    chars: "ﾊﾐﾋｰｳｼﾅﾓﾆｻ012345789",
+    speed: 0.3
+  },
+  duration: 2
+});
+
+// Animation de compteur numérique pour un effet
+gsap.to(".pct-html", {
+  innerText: 75 + "%", duration: 0.85, 
+  ease: "steps(12)",
+  snap: {
+    innerText: 5
+  }
+});
+
+gsap.to(".pct-css", {
+  innerText: 75 + "%", duration: 0.85, 
+  ease: "steps(12)",
+  snap: {
+    innerText: 5
+  }
+});
+
+gsap.to(".pct-js", {
+  innerText: 60 + "%", duration: 0.85, 
+  ease: "power1.out",
+  snap: {
+    innerText: 5
+  }
+});
+
+gsap.to(".pct-github", {
+  innerText: 65 + "%", duration: 0.85, 
+  ease: "power1.out",
+  snap: {
+    innerText: 5
+  }
+});
+
+gsap.to(".pct-cms", {
+  innerText: 75 + "%", duration: 0.85, 
+  ease: "power1.out",
+  snap: {
+    innerText: 5
+  }
+});
+
+gsap.to(".pct-cpp", {
+  innerText: 5 + "%", duration: 0.85, 
+  ease: "power1.out",
+  snap: {
+    innerText: 5
+  }
+});
+

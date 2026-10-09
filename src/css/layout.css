@@ -120,7 +120,7 @@ body {
     border-radius: 25px;
     border: 1px solid var(--button-stroke);
 
-    > a {
+    >a {
       display: flex;
       text-decoration: none;
       color: var(--text-secondary-color);
@@ -135,6 +135,11 @@ body {
       color: var(--text-secondary-color);
       font-family: var(--font-global);
       font-size: 0.75rem;
+      min-height: 1.3rem;
+
+      .matrix {
+        min-width: 15em;
+      }
 
       .light {
         width: 0.65rem;
@@ -142,8 +147,19 @@ body {
         border-radius: 50%;
         background-color: #00ff71;
         margin-right: 0.5rem;
+        animation: glow 1s infinite alternate;
       }
     }
+  }
+}
+ /* Animation de l'indicateur de statut stage */
+@keyframes glow {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: 0 0 10px #00ff71, 0 0 20px #00ff71, 0 0 30px #00ff71;
   }
 }
 
@@ -170,7 +186,7 @@ body {
     color: var(--text-tertiary-color);
   }
 
-  .status-notes > :last-child {
+  .status-notes> :last-child {
     color: var(--text-primary-color);
   }
 }
@@ -214,6 +230,7 @@ body {
     display: flex;
     justify-content: flex-start;
     padding: 1rem 0rem;
+
     .left-text {
       display: none;
     }
@@ -233,7 +250,7 @@ body {
       display: none;
     }
   }
-  
+
   .frame-footer {
     display: flex;
     justify-content: center;
@@ -284,7 +301,7 @@ body {
 /* TÉLÉPHONE */
 @media (max-width: 768px) {
   body {
-    min-height: 100dvh;
+    min-height: 100vh;
     padding: 1rem 0;
   }
 
@@ -321,7 +338,7 @@ body {
     }
 
     .right {
-      display: none;
+      display: flex;
     }
   }
 
