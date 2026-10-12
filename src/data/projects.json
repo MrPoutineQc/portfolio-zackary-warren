@@ -18,7 +18,11 @@
       ],
       "link": "https://minecraft.net",
       "github": "https://google.com",
-      "alt": "Image de la planète Veyloria"
+      "alt": "Image de la planète Veyloria",
+      "modalTitle": "",
+      "modalSubTitle": "",
+      "modalSteps": [],
+      "modalFooter": ""
     },
     {
       "id": "cs2",
@@ -40,7 +44,11 @@
       ],
       "link": "https://github.com",
       "github": "https://google.com",
-      "alt": "Image du site de critique de Counter-Strike 2"
+      "alt": "Image du site de critique de Counter-Strike 2",
+      "modalTitle": "",
+      "modalSubTitle": "",
+      "modalSteps": [],
+      "modalFooter": ""
     },
     {
       "id": "qrypta",
@@ -61,7 +69,68 @@
       ],
       "link": "https://youtube.com",
       "github": "https://google.com",
-      "alt": "Image du tableau de bord Qrypta"
+      "alt": "Image du tableau de bord Qrypta",
+      "modalTitle": "Processus de création",
+      "modalSubTitle": "Les différentes étapes de conception et de développement de l'interface bancaire futuriste Qrypta.",
+      "modalSteps": [
+        {
+          "number": "01.",
+          "title": "Planification et direction artistique",
+          "description": "Définition du concept visuel et de l’architecture fonctionnelle de l’interface afin de garantir une identité cyberpunk et science-fiction cohérente.",
+          "items": [
+            {"title": "Identité visuelle HUD", "text": "thème sombre, accents jaune-orange, typographies technologiques et dispositions modulaires inspirées des affichages tête haute."},
+            {"title": "Architecture de l'information", "text": "organisation des soldes crypto, transactions, indicateurs de performance, visualiseur 3D et métriques en temps réel."},
+            {"title": "Wireframing", "text": "création d'une grille ergonomique permettant d'afficher de nombreuses données tout en préservant la lisibilité."}
+          ],
+          "link": "https://github.com/MrPoutineQc/preparation-stage-2026/raw/main/media/qrypta_moodbard.png",
+          "linkLabel": "Voir le moodboard ↗"
+        },
+        {
+          "number": "02.",
+          "title": "Structure et stylisation avancée",
+          "description": "Développement de la structure de l'application et création de son atmosphère visuelle à l'aide de HTML5 et CSS3.",
+          "items": [
+            {"title": "HTML5 sémantique", "text": "organisation du tableau de bord en widgets autonomes accueillant graphiques, données et contrôles interactifs."},
+            {"title": "CSS Grid et Flexbox", "text": "création d'une mise en page adaptative assurant l'alignement des panneaux selon la résolution."},
+            {"title": "Effets visuels", "text": "bordures lumineuses, transparence, flou d'arrière-plan, textures vectorielles et animations de balayage."}
+          ],
+          "link": "https://github.com/MrPoutineQc/preparation-stage-2026/raw/main/media/qrypta_vscode.png",
+          "linkLabel": "Voir le code dans VS Code ↗"
+        },
+        {
+          "number": "03.",
+          "title": "Visualisation de données dynamiques",
+          "description": "Intégration de Chart.js afin de transformer les données financières en représentations visuelles claires et interactives.",
+          "items": [
+            {"title": "Graphiques", "text": "utilisation d'éléments canvas pour représenter l'évolution des portefeuilles et les variations du marché."},
+            {"title": "Personnalisation", "text": "dégradés néon, grilles épurées, courbes lissées et infobulles stylisées."},
+            {"title": "Métriques interactives", "text": "structuration des séries de données et simulation de variations d'actifs au survol."}
+          ]
+        },
+        {
+          "number": "04.",
+          "title": "Animations 3D et micro-interactions",
+          "description": "Dynamisation du tableau de bord pour renforcer l'expérience interactive et l'esthétique futuriste du HUD.",
+          "items": [
+            {"title": "Zdog", "text": "création d'un élément géométrique pseudo-3D animé dans un canvas, avec une rotation continue."},
+            {"title": "Anime.js", "text": "animations d'apparition en cascade, compteurs incrémentaux et pulsations des indicateurs d'état."},
+            {"title": "JavaScript", "text": "gestion des clics, survols et filtres temporels pour actualiser les composants sans recharger la page."}
+          ],
+          "mediaTitle": "Démonstration de l'animation complète",
+          "media": "https://lorem.video/720p.mp4"
+        },
+        {
+          "number": "05.",
+          "title": "Optimisation et stabilisation",
+          "description": "Vérification des performances, de la cohérence visuelle et du comportement de l'application sur différentes configurations d'écran.",
+          "items": [
+            {"title": "Performances", "text": "optimisation des boucles d'animation et de la fréquence de rafraîchissement des canvas."},
+            {"title": "Tests multi-résolutions", "text": "validation de l'affichage et de l'équilibre visuel du HUD sur différents formats d'écran."},
+            {"title": "Finalisation", "text": "organisation des scripts JavaScript, optimisation des ressources et documentation technique."}
+          ]
+        }
+      ],
+      "modalFooter": "Le projet Qrypta a été conçu dans le cadre d'un projet de cours au Collège Montmorency, visant à démontrer mes compétences en intégration front-end et en conception d'interfaces utilisateur."
     },
     {
       "id": "scootex",
@@ -81,6 +150,10 @@
       ],
       "link": "https://google.com",
       "github": "https://google.com",
-      "alt": "Image de la boutique e-commerce Scootex"
+      "alt": "Image de la boutique e-commerce Scootex",
+      "modalTitle": "",
+      "modalSubTitle": "",
+      "modalSteps": [],
+      "modalFooter": ""
     }
   ]
