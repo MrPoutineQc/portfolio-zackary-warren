@@ -4,7 +4,7 @@
       "number": "01.",
       "title": "Veyloria",
       "summary": "Une planète énigmatique et secrète, au-delà de l'imagination.",
-      "description": "Création d’un site web présentant une planète fictive.",
+      "description": "Création d’un site web présentant une planète fictive dans le cadre d’un projet visant à approfondir nos connaissances en développement web et à expérimenter différentes technologies. J’ai réalisé l’intégration complète d’une page web en utilisant Tailwind CSS pour le responsive et du CSS personnalisé pour la mise en forme. J’ai également développé des animations interactives avec GSAP afin d’enrichir l’expérience utilisateur.",
       "image": [
         "./src/assets/images/veyloria_1.png",
         "https://picsum.photos/1920/1080",
@@ -25,7 +25,7 @@
       "number": "02.",
       "title": "Critique",
       "summary": "Ceci est une critique du FPS Counter-Strike 2",
-      "description": "Création d’un site thématique d’évaluation et de critique du jeu Counter-Strike 2, intégrant la grille et différents composants de Bootstrap ainsi que Bootstrap Icons.",
+      "description": "Création d’un site Web thématique consacré à l’évaluation et à la critique de Counter-Strike 2. Dans le cadre de ce projet individuel, j’ai conçu une interface responsive en exploitant la grille et les composants de Bootstrap, notamment les cartes, les conteneurs et la barre de navigation. J’ai ensuite personnalisé les styles CSS et intégré Bootstrap Icons afin de créer une identité visuelle cohérente avec l’univers du jeu.",
       "imageFallback": "./src/assets/images/cs2_1.png",
       "image": [
         "./src/assets/images/cs2_1.png",
@@ -47,7 +47,7 @@
       "number": "03.",
       "title": "Qrypta",
       "summary": "Ceci est un sous-titre de Qrypta",
-      "description": "Tableau de bord de style HUD futuriste intégrant de la visualisation de données dynamiques et animées.",
+      "description": "Conception d’un tableau de bord bancaire futuriste inspiré des interfaces HUD, intégrant des visualisations de données dynamiques et animées. Dans le cadre de ce projet, j’ai développé une interface personnalisée avec des animations CSS et utilisé JavaScript pour manipuler le DOM et rendre l’expérience interactive. J’ai également intégré Chart.js afin de générer des graphiques réactifs qui s’adaptent aux données et aux interactions de l’utilisateur.",
       "imageFallback": "./src/assets/images/qrypta_1.png",
       "image": [
         "./src/assets/images/qrypta_1.png",
@@ -68,7 +68,7 @@
       "number": "04.",
       "title": "Scootex",
       "summary": "Ceci est un sous-titre de Scootex",
-      "description": "Boutique e-commerce moderne et responsive dédiée à la vente de trottinettes électriques et d'équipements de mobilité urbaine.",
+      "description": "Création d’une boutique e-commerce moderne et responsive spécialisée dans la vente de trottinettes électriques et d’équipements de mobilité urbaine. J’ai conçu et intégré les différents gabarits du site avec Elementor, puis configuré la boutique et son catalogue de produits à l’aide de WooCommerce. J’ai également utilisé Advanced Custom Fields (ACF) pour structurer des champs dynamiques permettant d’afficher les caractéristiques techniques de chaque modèle et d’améliorer la présentation des produits.",
       "imageFallback": "./src/assets/images/scootex_1.png",
       "image": [
         "./src/assets/images/scootex_1.png",

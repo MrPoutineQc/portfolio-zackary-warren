@@ -47,7 +47,6 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     background: var(--orbs-primary-color);
     border: 2px solid var(--background-color);
-    border-radius: 50px;
 }
 
 html::-webkit-scrollbar-thumb:hover {

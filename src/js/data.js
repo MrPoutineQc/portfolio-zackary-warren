@@ -104,7 +104,7 @@ function createProjectCard(project) {
             <span>Github</span>
           </a>
 
-          <button type="button" class="btn btn-secondary" aria-haspopup="dialog">
+          <button type="button" class="btn btn-secondary modalButton" aria-haspopup="dialog">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-info-circle-fill" viewBox="0 0 16 16">
               <path

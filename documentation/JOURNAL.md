@@ -88,3 +88,9 @@
 - **Prompt :**
   - _Prompt #1 :_ Trouve-moi l'erreur qui m'empêche d'exécuter la fonction switchimage (HTML/JS en fichier joint)
 - **Résultat :** J'avais fait une partie du code, cependant elle ne fonctionnait pas comme je le voulais. Alors je lui ai demandé ce qui causait l'erreur et il m'a corrigé tout en m'expliquant
+
+- **Date :** 12 octobre 2026
+- **Outil :** Copilot x VsCode
+- **Prompt :**
+  - _Prompt #1 :_ Comment je pourrais animer tous les éléments d'un projet lorsqu'il est affiché uniquement, j'ai une petite idée en créant une fonction qui se déclenche lorsqu'on clique sur un l'un des projets.
+- **Résultat :** Il m'a effectivement créé une fonction qui déclenche les animations directement après ma fonction `showProject`.

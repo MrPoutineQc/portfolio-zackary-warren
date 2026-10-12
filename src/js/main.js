@@ -53,6 +53,12 @@ const buttons = [
   veyloriaProjectButton,
 ];
 
+
+// Modal 
+const modal = document.getElementById("modalProject");
+const closeModalButton = document.querySelector(".close");
+const openModalButton = document.querySelector(".modalButton");
+
 // --------------------------------------------------------------------
 // 3. ÉCOUTEURS D'ÉVÉNEMENTS (EVENT LISTENERS)
 // --------------------------------------------------------------------
@@ -63,6 +69,8 @@ scootexProjectButton.addEventListener("click", showProject);
 cs2ProjectButton.addEventListener("click", showProject);
 veyloriaProjectButton.addEventListener("click", showProject);
 projectContent.addEventListener("click", switchImage);
+closeModalButton.addEventListener("click", closeModal);
+openModalButton.addEventListener("click", openModal);
 
 
 // --------------------------------------------------------------------
@@ -95,11 +103,51 @@ function showProject(e) {
   // Affichage du projet cible ou journalisation d'une erreur si introuvable
   if (targetProject) {
     targetProject.style.display = "flex";
+
+    // Animation des éléments du projet après son affichage
+    animateProject(targetProject);
   } else {
     console.error(`Aucun projet trouvé avec l'ID : ${projectId}`);
   }
 
   console.log("PROJET SÉLECTIONNÉ : " + projectId);
+}
+
+/**
+ * Anime les éléments du projet après son affichage
+ */
+function animateProject(project) {
+  const projectElements = project.querySelectorAll(
+    ".project-header > *, .project-carousel, .project-actions, .project-details > .details-block",
+  );
+  const technologyBadges = project.querySelectorAll(".badge-tech");
+
+  // Assure que toutes les animations précédentes sont arrêtées avant de commencer de nouvelles animations
+  gsap.killTweensOf(projectElements);
+  gsap.killTweensOf(technologyBadges);
+
+  // Animation des éléments du projet avec GSAP
+  gsap.timeline()
+    .from(projectElements, {
+      opacity: 0,
+      y: 24,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.1,
+      clearProps: "transform,opacity",
+    })
+    .from(
+      technologyBadges,
+      {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.35,
+        ease: "back.out(1.7)",
+        stagger: 0.08,
+        clearProps: "transform,opacity",
+      },
+      "-=0.25",
+    );
 }
 
 /**
@@ -148,6 +196,18 @@ function switchImage(e) {
   console.log(`Image ${index + 1} sélectionnée`);
 
 }
+
+function openModal() {
+  modal.style.display = "flex";
+  console.log("Modal ouvert");
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  console.log("Modal fermé");
+}
+
+
 // --------------------------------------------------------------------
 // 5. ANIMATIONS (GSAP)
 // --------------------------------------------------------------------
@@ -188,7 +248,7 @@ gsap.to(".matrix", {
 
 // Animation de compteur numérique pour un effet
 gsap.to(".pct-html", {
-  innerText: 75 + "%", duration: 0.85, 
+  innerText: 75 + "%", duration: 0.85,
   ease: "steps(12)",
   snap: {
     innerText: 5
@@ -196,7 +256,7 @@ gsap.to(".pct-html", {
 });
 
 gsap.to(".pct-css", {
-  innerText: 75 + "%", duration: 0.85, 
+  innerText: 75 + "%", duration: 0.85,
   ease: "steps(12)",
   snap: {
     innerText: 5
@@ -204,7 +264,7 @@ gsap.to(".pct-css", {
 });
 
 gsap.to(".pct-js", {
-  innerText: 60 + "%", duration: 0.85, 
+  innerText: 60 + "%", duration: 0.85,
   ease: "power1.out",
   snap: {
     innerText: 5
@@ -212,7 +272,7 @@ gsap.to(".pct-js", {
 });
 
 gsap.to(".pct-github", {
-  innerText: 65 + "%", duration: 0.85, 
+  innerText: 65 + "%", duration: 0.85,
   ease: "power1.out",
   snap: {
     innerText: 5
@@ -220,7 +280,7 @@ gsap.to(".pct-github", {
 });
 
 gsap.to(".pct-cms", {
-  innerText: 75 + "%", duration: 0.85, 
+  innerText: 75 + "%", duration: 0.85,
   ease: "power1.out",
   snap: {
     innerText: 5
@@ -228,10 +288,9 @@ gsap.to(".pct-cms", {
 });
 
 gsap.to(".pct-cpp", {
-  innerText: 5 + "%", duration: 0.85, 
+  innerText: 5 + "%", duration: 0.85,
   ease: "power1.out",
   snap: {
     innerText: 5
   }
 });
-
