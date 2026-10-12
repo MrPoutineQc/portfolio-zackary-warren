@@ -57,7 +57,7 @@ const buttons = [
 // Modal 
 const modal = document.getElementById("modalProject");
 const closeModalButton = document.querySelector(".close");
-const openModalButton = document.querySelector(".modalButton");
+const openModalButtons = document.querySelectorAll(".modalButton");
 
 // --------------------------------------------------------------------
 // 3. ÉCOUTEURS D'ÉVÉNEMENTS (EVENT LISTENERS)
@@ -70,7 +70,9 @@ cs2ProjectButton.addEventListener("click", showProject);
 veyloriaProjectButton.addEventListener("click", showProject);
 projectContent.addEventListener("click", switchImage);
 closeModalButton.addEventListener("click", closeModal);
-openModalButton.addEventListener("click", openModal);
+openModalButtons.forEach((modalbutton) => {
+  modalbutton.addEventListener("click", openModal);
+});
 
 
 // --------------------------------------------------------------------
@@ -92,6 +94,7 @@ function showProject(e) {
   // Basculement de l'affichage des conteneurs principaux
   mainContent.style.display = "none";
   projectContent.style.display = "flex";
+  modal.style.display = "none"; // Assure que le modal est fermé lors de l'affichage d'un projet
 
   // Mise à jour visuelle de l'état actif des boutons de navigation
   buttons.forEach((button) => button.classList.remove("active"));
@@ -150,6 +153,35 @@ function animateProject(project) {
     );
 }
 
+function animateModal() {
+  const modalContent = modal.querySelector(".modal-content");
+  const modalElements = modalContent.querySelectorAll(
+    ".process-header > *, .process-step, .process-footer",
+  );
+
+  // Assure que toutes les animations précédentes sont arrêtées avant de commencer de nouvelles animations
+  gsap.killTweensOf(modalContent);
+  gsap.killTweensOf(modalElements);
+
+  // Animation des éléments du modal avec GSAP
+  gsap.timeline()
+    .from(modalContent, {
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.35,
+      ease: "power2.out",
+      clearProps: "transform,opacity",
+    })
+    .from(modalElements, {
+      opacity: 0,
+      y: 24,
+      duration: 0.5,
+      ease: "power2.out",
+      stagger: 0.08,
+      clearProps: "transform,opacity",
+    }, "-=0.15");
+}
+
 /**
  * Fonction pour masquer les projets et afficher la vue d'accueil
  */
@@ -159,6 +191,7 @@ function hideProject(e) {
   // Restauration de l'affichage de la vue d'accueil
   mainContent.style.display = "flex";
   projectContent.style.display = "none";
+  modal.style.display = "none";
 
   // Réinitialisation de l'état actif des boutons
   buttons.forEach((button) => button.classList.remove("active"));
@@ -200,6 +233,7 @@ function switchImage(e) {
 // Fonctions pour ouvrir et fermer le modal
 function openModal() {
   modal.style.display = "flex";
+  animateModal();
   console.log("Modal ouvert");
 }
 
@@ -214,6 +248,7 @@ window.onclick = function (event) {
     closeModal();
   }
 };
+
 
 // --------------------------------------------------------------------
 // 5. ANIMATIONS (GSAP)
