@@ -197,6 +197,7 @@ function switchImage(e) {
 
 }
 
+// Fonctions pour ouvrir et fermer le modal
 function openModal() {
   modal.style.display = "flex";
   console.log("Modal ouvert");
@@ -207,6 +208,12 @@ function closeModal() {
   console.log("Modal fermé");
 }
 
+// Fermer le modal lorsque l'utilisateur clique en dehors de celui-ci
+window.onclick = function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+};
 
 // --------------------------------------------------------------------
 // 5. ANIMATIONS (GSAP)
