@@ -32,7 +32,7 @@
       "description": "Création d’un site Web thématique consacré à l’évaluation et à la critique de Counter-Strike 2. Dans le cadre de ce projet individuel, j’ai conçu une interface responsive en exploitant la grille et les composants de Bootstrap, notamment les cartes, les conteneurs et la barre de navigation. J’ai ensuite personnalisé les styles CSS et intégré Bootstrap Icons afin de créer une identité visuelle cohérente avec l’univers du jeu.",
       "imageFallback": "./src/assets/images/cs2_1.png",
       "image": [
-        "./src/assets/images/cs2_1.png",
+        "./src/assets/images/cs2_0.gif",
         "./src/assets/images/cs2_2.png",
         "./src/assets/images/cs2_3.png"
       ],
@@ -117,7 +117,7 @@
             {"title": "JavaScript", "text": "gestion des clics, survols et filtres temporels pour actualiser les composants sans recharger la page."}
           ],
           "mediaTitle": "Démonstration de l'animation complète",
-          "media": "https://www.youtube.com/watch?v=QQggqlVq3uM"
+          "media": "./src/assets/images/qrypta.mp4"
         },
         {
           "number": "05.",

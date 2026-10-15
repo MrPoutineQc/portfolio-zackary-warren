@@ -26,6 +26,13 @@ async function init() {
   projects.forEach((project) => {
     projectContent.insertAdjacentHTML("beforeend", createProjectCard(project));
   });
+
+  // Ajouter le modal si un projet a un titre de modal
+  const modalProject = projects.find((project) => project.modalTitle);
+  if (modalProject) {
+    projectContent.insertAdjacentHTML("beforeend", createProjectModal(modalProject));
+  }
+
 }
 
 // ------------------------------------------------------------------------------
@@ -44,6 +51,9 @@ function createProjectCard(project) {
 
   // Déclare fallbackImage comme une chaîne vide si project.imageFallback
   const fallbackImage = project.imageFallback || projectImages[0] || "";
+
+  // Vérifie si le projet a un titre de modal et des étapes de modal pour déterminer si le bouton "En savoir plus" doit être affiché
+  const hasModal = project.modalTitle && project.modalSteps.length > 0;
 
   return `
     <!-- Conteneur principal du projet -->
@@ -65,15 +75,15 @@ function createProjectCard(project) {
           <div class="carousel-viewport">
             <ul class="carousel-track">
               <li class="carousel-slide 1 active">
-                <img src="${projectImages[0] || fallbackImage}" alt="Capture d'écran principale du projet ${project.title}" />
+                <img src="${projectImages[0] || fallbackImage}" alt="${project.alt}" />
               </li>
 
               <li class="carousel-slide 2 inactive">
-                <img src="${projectImages[1] || fallbackImage}" alt="Capture d'écran secondaire du projet ${project.title}" />
+                <img src="${projectImages[1] || fallbackImage}" alt="${project.alt}" />
               </li>
 
               <li class="carousel-slide 3 inactive">
-                <img src="${projectImages[2] || fallbackImage}" alt="Capture d'écran complémentaire du projet ${project.title}" />
+                <img src="${projectImages[2] || fallbackImage}" alt="${project.alt}" />
               </li>
             </ul>
           </div>
@@ -104,14 +114,14 @@ function createProjectCard(project) {
             <span>Github</span>
           </a>
 
-          <button type="button" class="btn btn-secondary modalButton" aria-haspopup="dialog">
+          ${hasModal ? `<button type="button" class="btn btn-secondary modalButton" aria-haspopup="dialog">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-info-circle-fill" viewBox="0 0 16 16">
               <path
                 d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
             </svg>
             <span>En savoir plus</span>
-          </button>
+          </button>` : ''}
         </div>
       </section>
 
@@ -136,6 +146,58 @@ function createProjectCard(project) {
         </div>
       </aside>
 
+    </div>
+  `;
+}
+
+// ------------------------------------------------------------------------------
+// 4. Générateur de modal pour les projets
+// ----------------------------------------------------------------------------
+function createProjectModal(project) {
+  const modalSteps = Array.isArray(project.modalSteps) ? project.modalSteps : [];
+
+
+  if (!project.modalTitle || modalSteps.length === 0) {
+    return "";
+  }
+
+  return `
+    <div id="modalProject" class="modal" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <header class="process-header">
+          <span class="process-label">${project.title}</span>
+          <h2 id="modal-title">${project.modalTitle}</h2>
+          <p>${project.modalSubTitle}</p>
+        </header>
+
+        ${modalSteps.map((step) => `
+          <section class="process-step">
+            <div class="process-step-content">
+              <h3><span class="process-number">${step.number}</span>${step.title}</h3>
+              <p>${step.description}</p>
+              ${Array.isArray(step.items) && step.items.length > 0 ? `
+                <ul>
+                  ${step.items.map((item) => `<li><strong>${item.title} :</strong> ${item.text}</li>`).join("")}
+                </ul>
+              ` : ""}
+              ${step.link ? `<a class="process-link" href="${step.link}" target="_blank" rel="noopener noreferrer">${step.linkLabel}</a>` : ""}
+              ${step.media ? `
+                <div class="process-media">
+                  <p class="process-media-title">${step.mediaTitle}</p>
+                  <video autoplay muted loop class="process-video" title="${step.mediaTitle}"
+                    loading="lazy" allowfullscreen>
+                    <source src="${step.media}" type="video/mp4">
+                  </video>
+                </div>
+              ` : ""}
+            </div>
+          </section>
+        `).join("")}
+
+        ${project.modalFooter ? `<footer class="process-footer"><p>${project.modalFooter}</p></footer>` : ""}
+      </div>
     </div>
   `;
 }

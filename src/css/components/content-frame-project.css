@@ -57,7 +57,7 @@
       .description-project {
         margin: 0;
         max-width: 600px;
-        font-size: clamp(0.75rem, 1vw, 1rem);
+        font-size: clamp(1rem, 1vw, 1rem);
         line-height: 1.5;
         font-weight: 400;
         color: var(--text-tertiary-color);
@@ -83,6 +83,7 @@
         padding: 0;
         margin: 0;
         overflow: hidden;
+        touch-action: pan-y;
         background-color: var(--background-color);
         border-radius: 10px;
 

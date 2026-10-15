@@ -53,8 +53,6 @@ const buttons = [
   veyloriaProjectButton,
 ];
 
-
-// Modal 
 const modal = document.getElementById("modalProject");
 const closeModalButton = document.querySelector(".close");
 const openModalButtons = document.querySelectorAll(".modalButton");
@@ -250,6 +248,7 @@ window.onclick = function (event) {
 };
 
 
+
 // --------------------------------------------------------------------
 // 5. ANIMATIONS (GSAP)
 // --------------------------------------------------------------------
@@ -306,7 +305,7 @@ gsap.to(".pct-css", {
 });
 
 gsap.to(".pct-js", {
-  innerText: 60 + "%", duration: 0.85,
+  innerText: 50 + "%", duration: 0.85,
   ease: "power1.out",
   snap: {
     innerText: 5
