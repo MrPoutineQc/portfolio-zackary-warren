@@ -187,7 +187,7 @@ function createProjectModal(project) {
                 <div class="process-media">
                   <p class="process-media-title">${step.mediaTitle}</p>
                   <video autoplay muted loop class="process-video" title="${step.mediaTitle}"
-                    loading="lazy" allowfullscreen>
+                    loading="lazy">
                     <source src="${step.media}" type="video/mp4">
                   </video>
                 </div>
