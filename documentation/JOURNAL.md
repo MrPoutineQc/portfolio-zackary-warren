@@ -89,6 +89,20 @@
   - _Prompt #1 :_ Trouve-moi l'erreur qui m'empêche d'exécuter la fonction switchimage (HTML/JS en fichier joint)
 - **Résultat :** J'avais fait une partie du code, cependant elle ne fonctionnait pas comme je le voulais. Alors je lui ai demandé ce qui causait l'erreur et il m'a corrigé tout en m'expliquant
 
+
+## Bloc 2 : intégration et données.
+
+1. Qu'est-ce que j'ai accompli depuis le dernier bloc? (Vous pouvez faire référence à vos commits.)
+  - J'ai incorporé les données dynamiques au site web et pratiquement finalisé le style principal.
+2. Quelle a été ma principale difficulté et comment je l'ai surmontée?
+  - Faire afficher les différents projets en display:block et display:none en appuyant sur le bouton dans la nav en question qui représente le projet sélectionné. J'ai demandé un coup de pouce à l'IA pour pouvoir m'aider sur cet aspect que je n'avais jamais fait avant.
+3. Qu'est-ce que j'ai appris que je ne savais pas avant?
+  - Je crois avoir mieux saisi le chargement asynchrone des données, malgré que je ne serais sûrement pas capable encore de reproduire de 0 et qu'il faudrait que je fasse davantage.
+4. Quelle est ma prochaine étape concrète?
+ - Faire le responsive (Cellulaire, Tablette, Grand écran) du site complet. 
+5. Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris?
+ - J'ai utilisé l'IA pour corriger les erreurs que je n'arrivais pas à diagnostiquer, j'ai pu comprendre avec lui mes erreurs et comment les éviter.
+
 - **Date :** 12 octobre 2026
 - **Outil :** Copilot x VsCode
 - **Prompt :**
@@ -101,3 +115,17 @@
 - **Prompt :**
   - _Prompt #1 :_ Mets mon modalProject dans le data.js pour qu'il se charge comme le reste et mets les bonnes variables qui se trouvent dans projects.json
 - **Résultat :** Il m'a créé une nouvelle variable dans le data.js pour charger mon modal.
+
+
+## Bloc 3 : correctifs et finalisation
+
+1. Qu'est-ce que j'ai accompli depuis le dernier bloc? (Vous pouvez faire référence à vos commits.)
+  - J'ai complété la majorité du responsive du site, complété le `projects.json` pour qu'il affiche les bonnes informations et renvoie au bon site et j'ai ajouté plusieurs animations GSAP ainsi que le modal chargé dynamiquement aussi avec asynchrone.
+2. Quelle a été ma principale difficulté et comment je l'ai surmontée?
+  - Il s'agit probablement du modal chargé dynamiquement, je n'avais jamais fait ça auparavant. L'IA m'a été utile pour comprendre comment faire et l'appliquer. J'ai ensuite pu, en comprenant le code, faire afficher uniquement le bouton quand il y avait de l'information dans le modal.
+3. Qu'est-ce que j'ai appris que je ne savais pas avant?
+  - J'ai appris comment utiliser GSAP (scrollTrigger, timeline, animation text/div) qui est sensiblement la même chose que AnimeJS.
+4. Quelle est ma prochaine étape concrète?
+  - Corriger les quelques bugs restants et ajouter quelques animations au besoin, ainsi que d'ajouter un swiper fonctionnel pour les images des projets.
+5. Est-ce que j'ai utilisé l'IA? Si oui, pour quoi et qu'est-ce que ça m'a appris?
+  -  IA m'a permis de comprendre comment créer un modal chargé dynamiquement et d'afficher les animations d'un projet seulement lorsque celui-ci est affiché, car je rappelle que mon projet est un one-pager avec des `display:none` et `display:flex`

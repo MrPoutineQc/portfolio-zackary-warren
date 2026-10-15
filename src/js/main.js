@@ -151,33 +151,75 @@ function animateProject(project) {
     );
 }
 
+/**
+* Fonction pour animer l'ouverture du modal et les éléments à l'intérieur
+*/
 function animateModal() {
+  // Sélection du contenu du modal pour l'animation
   const modalContent = modal.querySelector(".modal-content");
+
+  // Permet de selectionner tous les éléments à l'intérieur du modal qui nécessitent une animation
   const modalElements = modalContent.querySelectorAll(
-    ".process-header > *, .process-step, .process-footer",
+    ".process-header > *, .process-step, .process-footer, .separator-modal"
   );
 
-  // Assure que toutes les animations précédentes sont arrêtées avant de commencer de nouvelles animations
-  gsap.killTweensOf(modalContent);
-  gsap.killTweensOf(modalElements);
+  // Nettoyer les anciennes animations
+  gsap.killTweensOf([modalContent || modalElements]);
 
-  // Animation des éléments du modal avec GSAP
-  gsap.timeline()
-    .from(modalContent, {
+  // Animation du contenu à l'ouverture
+  gsap.fromTo(
+    modalContent,
+    {
       opacity: 0,
       scale: 0.95,
+    },
+    {
+      opacity: 1,
+      scale: 1,
       duration: 0.35,
       ease: "power2.out",
       clearProps: "transform,opacity",
-    })
-    .from(modalElements, {
-      opacity: 0,
-      y: 24,
-      duration: 0.5,
-      ease: "power2.out",
-      stagger: 0.08,
-      clearProps: "transform,opacity",
-    }, "-=0.15");
+    }
+  );
+
+  // Animation déclenchée par le scroll dans le modal
+  modalElements.forEach((element) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        clearProps: "transform,opacity",
+        scrollTrigger: {
+          trigger: element,
+          scroller: ".modal-content",
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+
+  // Animation séparateur modal
+  gsap.from(".separator-modal", {
+    duration: 1.25,
+    scaleX: 0,
+    transformOrigin: "left",
+    ease: "power2.inOut",
+    stagger: 0.15,
+    scrollTrigger: {
+      trigger: ".process-header",
+      scroller: "#modalProject",
+      start: "top 90%",
+      toggleActions: "play none none none",
+    },
+  });
 }
 
 /**
@@ -270,6 +312,12 @@ gsap.to(".main-title", {
   ease: "none",
 });
 
+gsap.to(".skills-title", {
+  text: { value: "TECHNOLOGIES &amp; NIVEAU" },
+  duration: 1.5,
+  ease: "none",
+});
+
 // Animation machine à écrire pour la description principale
 gsap.to(".description", {
   text: { value: "Bonjour ! Je m'appelle Zackary Warren. Finissant en intégration multimédia au Collège Montmorency, je conçois et façonne des expériences numériques interactives pour le web de demain." },
@@ -334,4 +382,12 @@ gsap.to(".pct-cpp", {
   snap: {
     innerText: 5
   }
+});
+
+
+area.addEventListener("mousemove", (e) => {
+  gsap.to(light, {
+    left: e.offsetX, top: e.offsetY,
+    duration: 0.2
+  });
 });

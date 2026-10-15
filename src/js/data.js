@@ -171,6 +171,7 @@ function createProjectModal(project) {
           <h2 id="modal-title">${project.modalTitle}</h2>
           <p>${project.modalSubTitle}</p>
         </header>
+        <hr class="main-separator separator-modal" />
 
         ${modalSteps.map((step) => `
           <section class="process-step">

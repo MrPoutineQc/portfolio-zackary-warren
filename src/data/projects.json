@@ -117,7 +117,7 @@
             {"title": "JavaScript", "text": "gestion des clics, survols et filtres temporels pour actualiser les composants sans recharger la page."}
           ],
           "mediaTitle": "Démonstration de l'animation complète",
-          "media": "./src/assets/images/qrypta.mp4"
+          "media": "./src/assets/videos/qrypta.mp4"
         },
         {
           "number": "05.",

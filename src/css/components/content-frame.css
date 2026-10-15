@@ -73,7 +73,9 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
+          transform: translateY(-3px);
           background-color: var(--button-color-hover);
+          box-shadow: 0px 0px 10px var(--button-color-hover);
 
           svg {
             fill: var(--svg-color-hover);
