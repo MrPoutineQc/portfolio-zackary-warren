@@ -3,12 +3,11 @@
       "id": "veyloria",
       "number": "01.",
       "title": "Veyloria",
-      "summary": "Une planète énigmatique et secrète, au-delà de l'imagination.",
+      "summary": "Planète fictive interactive avec animations GSAP. (Personnel)",
       "description": "Création d’un site web présentant une planète fictive dans le cadre d’un projet visant à approfondir nos connaissances en développement web et à expérimenter différentes technologies. J’ai réalisé l’intégration complète d’une page web en utilisant Tailwind CSS pour le responsive et du CSS personnalisé pour la mise en forme. J’ai également développé des animations interactives avec GSAP afin d’enrichir l’expérience utilisateur.",
       "image": [
-        "./src/assets/images/veyloria_1.png",
-        "https://picsum.photos/1920/1080",
-        "https://picsum.photos/1920/1080"
+        "./src/assets/images/veyloria_2.png",
+        "./src/assets/images/veyloria_1.png"
       ],
       "imageFallback": "./src/assets/images/veyloria_1.png",
       "tech": [
@@ -16,25 +15,26 @@
         "./src/assets/icons/css.svg",
         "./src/assets/icons/js.svg"
       ],
-      "link": "https://minecraft.net",
-      "github": "https://google.com",
+      "link": "https://mrpoutineqc.github.io/veyloria/",
+      "github": "https://github.com/MrPoutineQc/veyloria",
       "alt": "Image de la planète Veyloria",
       "modalTitle": "",
       "modalSubTitle": "",
       "modalSteps": [],
       "modalFooter": ""
     },
+
     {
       "id": "cs2",
       "number": "02.",
       "title": "Critique",
-      "summary": "Ceci est une critique du FPS Counter-Strike 2",
+      "summary": "Critique de Counter-Strike 2 avec Bootstrap. (Académique)",
       "description": "Création d’un site Web thématique consacré à l’évaluation et à la critique de Counter-Strike 2. Dans le cadre de ce projet individuel, j’ai conçu une interface responsive en exploitant la grille et les composants de Bootstrap, notamment les cartes, les conteneurs et la barre de navigation. J’ai ensuite personnalisé les styles CSS et intégré Bootstrap Icons afin de créer une identité visuelle cohérente avec l’univers du jeu.",
       "imageFallback": "./src/assets/images/cs2_1.png",
       "image": [
         "./src/assets/images/cs2_1.png",
         "./src/assets/images/cs2_2.png",
-        "https://picsum.photos/1920/1080"
+        "./src/assets/images/cs2_3.png"
       ],
       "tech": [
         "./src/assets/icons/html.svg",
@@ -42,8 +42,8 @@
         "./src/assets/icons/css.svg",
         "./src/assets/icons/js.svg"
       ],
-      "link": "https://github.com",
-      "github": "https://google.com",
+      "link": "https://mrpoutineqc.github.io/zwarrren-tp1/",
+      "github": "https://github.com/MrPoutineQc/zwarrren-tp1",
       "alt": "Image du site de critique de Counter-Strike 2",
       "modalTitle": "",
       "modalSubTitle": "",
@@ -54,21 +54,21 @@
       "id": "qrypta",
       "number": "03.",
       "title": "Qrypta",
-      "summary": "Ceci est un sous-titre de Qrypta",
+      "summary": "Tableau de bord bancaire futuriste et interactif. (Académique)",
       "description": "Conception d’un tableau de bord bancaire futuriste inspiré des interfaces HUD, intégrant des visualisations de données dynamiques et animées. Dans le cadre de ce projet, j’ai développé une interface personnalisée avec des animations CSS et utilisé JavaScript pour manipuler le DOM et rendre l’expérience interactive. J’ai également intégré Chart.js afin de générer des graphiques réactifs qui s’adaptent aux données et aux interactions de l’utilisateur.",
       "imageFallback": "./src/assets/images/qrypta_1.png",
       "image": [
         "./src/assets/images/qrypta_1.png",
-        "https://picsum.photos/1920/1080",
-        "https://picsum.photos/1920/1080"
+        "./src/assets/images/qrypta_2.png",
+        "./src/assets/images/qrypta_3.jpg"
       ],
       "tech": [
         "./src/assets/icons/html.svg",
         "./src/assets/icons/css.svg",
         "./src/assets/icons/js.svg"
       ],
-      "link": "https://youtube.com",
-      "github": "https://google.com",
+      "link": "https://mrpoutineqc.github.io/qrypta/",
+      "github": "https://github.com/MrPoutineQc/qrypta",
       "alt": "Image du tableau de bord Qrypta",
       "modalTitle": "Processus de création",
       "modalSubTitle": "Les différentes étapes de conception et de développement de l'interface bancaire futuriste Qrypta.",
@@ -117,7 +117,7 @@
             {"title": "JavaScript", "text": "gestion des clics, survols et filtres temporels pour actualiser les composants sans recharger la page."}
           ],
           "mediaTitle": "Démonstration de l'animation complète",
-          "media": "https://lorem.video/720p.mp4"
+          "media": "https://www.youtube.com/watch?v=QQggqlVq3uM"
         },
         {
           "number": "05.",
@@ -136,19 +136,19 @@
       "id": "scootex",
       "number": "04.",
       "title": "Scootex",
-      "summary": "Ceci est un sous-titre de Scootex",
+      "summary": "Boutique responsive de trottinettes électriques. (Académique)",
       "description": "Création d’une boutique e-commerce moderne et responsive spécialisée dans la vente de trottinettes électriques et d’équipements de mobilité urbaine. J’ai conçu et intégré les différents gabarits du site avec Elementor, puis configuré la boutique et son catalogue de produits à l’aide de WooCommerce. J’ai également utilisé Advanced Custom Fields (ACF) pour structurer des champs dynamiques permettant d’afficher les caractéristiques techniques de chaque modèle et d’améliorer la présentation des produits.",
       "imageFallback": "./src/assets/images/scootex_1.png",
       "image": [
         "./src/assets/images/scootex_1.png",
-        "https://picsum.photos/1920/1080",
-        "https://picsum.photos/1920/1080"
+        "./src/assets/images/scootex_2.png",
+        "./src/assets/images/scootex_3.png"
       ],
       "tech": [
         "./src/assets/icons/wordpress.svg",
         "./src/assets/icons/css.svg"
       ],
-      "link": "https://google.com",
+      "link": "https://202496312.tim-momo.com/warren_zackary_final",
       "github": "https://google.com",
       "alt": "Image de la boutique e-commerce Scootex",
       "modalTitle": "",

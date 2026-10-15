@@ -152,7 +152,8 @@ body {
     }
   }
 }
- /* Animation de l'indicateur de statut stage */
+
+/* Animation de l'indicateur de statut stage */
 @keyframes glow {
   from {
     box-shadow: none;
@@ -343,5 +344,9 @@ body {
 
   .frame-footer {
     margin: 1rem 0 4rem;
+
+    .status-notes {
+      text-align: center;
+    }
   }
 }

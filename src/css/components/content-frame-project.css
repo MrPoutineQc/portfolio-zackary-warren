@@ -78,7 +78,8 @@
         align-items: center;
         flex: 1;
         min-height: 0;
-        width: 100%;
+        width: 95%;
+        height: 100%;
         padding: 0;
         margin: 0;
         overflow: hidden;
@@ -117,7 +118,7 @@
 
           .carousel-slide {
             &.active {
-              display: block;
+              display: flex;
             }
 
             &.inactive {
@@ -233,11 +234,16 @@
   display: none;
 }
 
+/* CACHE LE BOUTON GITHUB DU PROJET SCOOTEX */
+#project-scootex .btn-github {
+  display: none;
+}
+
 /* GRAND ÉCRAN */
 @media (min-width: 1920px) {
   .content-frame-project {
     .single-project-container {
-      gap: clamp(5rem, 8vw, 10rem);
+      gap: clamp(2rem, 3vw, 3rem);
     }
 
     .project-preview {
